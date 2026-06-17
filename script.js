@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
             roles: [
                 "Analisis Sistem Metode Agile",
                 "Database Design",
-                "UI/UX Design",
+                "Wireframe Design",
                 "Web Developer",
                 "Testing"
             ],

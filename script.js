@@ -221,14 +221,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Manajemen Data (CRUD): Pengelolaan data profil balita dan rekam medis secara dinamis.",
                 "Akses spesifik pencarian riwayat balita via nama/nomor registrasi.",
                 "Unduh otomatis rekapitulasi bulanan posyandu."
-
             ],
             github: "https://github.com/ameliaflora/posyandu-kemuning",
             gallery: [
-                { id: "dashboard", label: "Dashboard" },
-                { id: "databalita", label: "Data Balita" },
-                { id: "pemeriksaan", label: "Pemeriksaan" },
-                { id: "laporan", label: "Laporan Bulanan" }
+                { src: "assets/posyandu/loginkader.png", label: "Login Kader" },
+                { src: "assets/posyandu/pendaftaran.png", label: "Pendaftaran Balita" },
+                { src: "assets/posyandu/manajemendatabalita.png", label: "Manajemen Data Balita" },
+                { src: "assets/posyandu/inputpemeriksaan.png", label: "Pemeriksaan Balita" }
             ],
             type: "browser"
         },
@@ -248,10 +247,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             github: "https://github.com/ameliaflora/library-api",
             gallery: [
-                { id: "api-endpoints", label: "API Endpoints" },
-                { id: "data-buku", label: "Data Buku" },
-                { id: "data-anggota", label: "Data Anggota" },
-                { id: "transaksi-pinjam", label: "Transaksi Peminjaman" }
+                { src: "assets/perpus/login.png", label: "Halaman Login" },
+                { src: "assets/perpus/dashboardadmin.png", label: "Dashboard Admin" },
+                { src: "assets/perpus/berandamahasiswa.png", label: "Beranda Mahasiswa" },
+                { src: "assets/perpus/peminjaman.png", label: "Transaksi Peminjaman" }
             ],
             type: "browser"
         },
@@ -262,25 +261,19 @@ document.addEventListener('DOMContentLoaded', () => {
             about: "Sistem integrasi data otomatis untuk penarikan database dari Google Sheets API, penyaringan, dan pemrosesan data ke server lokal.",
             roles: [
                 "Frontend Developer",
-
-                "API Integration",
-
-
+                "API Integration"
             ],
             features: [
                 "Koneksi Google Sheets API (Service Account)",
                 "Penyaringan Baris Data secara Real-Time",
                 "Sinkronisasi Data Dua Arah",
-
                 "Visualisasi Dashboard Hasil Filter"
             ],
             github: "https://github.com/ameliaflora/gsheets-integration",
             gallery: [
-                { id: "dashboard", label: "Dashboard" },
-                { id: "dashboard", label: "Dashboard Filter" },
-                { id: "source-sheets", label: "Source Google Sheets" },
-                { id: "processed-data", label: "Data Terproses" },
-
+                { src: "assets/gsheet/googlesheets.png", label: "Sumber Google Sheets" },
+                { src: "assets/gsheet/dashboard.png", label: "Dashboard Utama" },
+                { src: "assets/gsheet/dashboarddata.png", label: "Dashboard Filter Data" }
             ],
             type: "browser"
         },
@@ -304,10 +297,12 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             github: "https://github.com/ameliaflora/inventory-ci",
             gallery: [
-                { id: "dashboard", label: "Dashboard Inventaris" },
-                { id: "data-hp", label: "Data Handphone" },
-                { id: "transaksi", label: "Transaksi Barang" },
-                { id: "laporan", label: "Laporan Inventaris" }
+                { src: "assets/hp/login.png", label: "Halaman Login" },
+                { src: "assets/hp/dashboard.png", label: "Dashboard Utama" },
+                { src: "assets/hp/databarang.png", label: "Data Barang & Stok" },
+                { src: "assets/hp/suplier.png", label: "Manajemen Supplier" },
+                { src: "assets/hp/barangmasuk.png", label: "Transaksi Barang Masuk" },
+                { src: "assets/hp/barangkeluar.png", label: "Transaksi Barang Keluar" }
             ],
             type: "browser"
         },
@@ -330,11 +325,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             github: "https://github.com/IsnaAinur/sumtime",
             gallery: [
-                { id: "login", label: "Halaman Login" },
-                { id: "berandapengguna", label: "Halaman Beranda Pengguna" },
-                { id: "keranjang", label: "Keranjang Belanja" },
-                { id: "statuspesanan", label: "Status Pesanan" },
-
+                { src: "assets/sumtime/login.png", label: "Halaman Login" },
+                { src: "assets/sumtime/menu.png", label: "Katalog Menu Dimsum" },
+                { src: "assets/sumtime/cekout.png", label: "Keranjang & Checkout" },
+                { src: "assets/sumtime/detailmenu.png", label: "Detail Menu" }
             ],
             type: "mobile"
         },
@@ -352,16 +346,12 @@ document.addEventListener('DOMContentLoaded', () => {
             features: [
                 "Formulir laporan aspirasi/keluhan yang interaktif.",
                 "Integrasi EmailJS untuk pengiriman laporan real-time tanpa database backend.",
-
-                "Halaman sukses pengiriman laporan (thank-you page).",
-
+                "Halaman sukses pengiriman laporan (thank-you page)."
             ],
             github: "https://github.com/Yeflou/laporan-desa-cerme",
             gallery: [
-                { id: "home", label: "Halaman Utama" },
-                { id: "form-laporan", label: "Formulir Laporan" },
-                { id: "validasi", label: "Validasi Input" },
-                { id: "thank-you", label: "Halaman Sukses" }
+                { src: "assets/desacerme/preview.png", label: "Halaman Layanan & Form" },
+                { src: "assets/desacerme/preview2.png", label: "Pengaduan Sukses" }
             ],
             type: "browser"
         }
@@ -420,49 +410,16 @@ document.addEventListener('DOMContentLoaded', () => {
             previewLabel.textContent = screen.label;
             previewItem.appendChild(previewLabel);
 
-            const deviceWrapper = document.createElement('div');
-            const isMobile = project.type === 'mobile';
-            deviceWrapper.className = isMobile ? 'mock-mobile-device' : 'mock-browser-device';
-
-            if (isMobile) {
-                deviceWrapper.innerHTML = `
-                    <div class="mock-mobile-speaker"></div>
-                    <div class="mock-mobile-camera"></div>
-                    <div class="mock-mobile-screen">
-                        <div class="mock-mobile-status-bar">
-                            <span class="mock-time">09:41</span>
-                            <div class="mock-status-icons">
-                                <i class="fa-solid fa-wifi"></i>
-                                <i class="fa-solid fa-signal"></i>
-                                <i class="fa-solid fa-battery-full"></i>
-                            </div>
-                        </div>
-                        <div class="mock-mobile-content mock-viewport"></div>
-                        <div class="mock-mobile-home-indicator"></div>
-                    </div>
-                `;
-                previewItem.appendChild(deviceWrapper);
-                const viewport = deviceWrapper.querySelector('.mock-viewport');
-                renderMobileScreenContent(viewport, projectKey, screen.id);
-            } else {
-                deviceWrapper.innerHTML = `
-                    <div class="mock-browser-header">
-                        <div class="mock-browser-dots">
-                            <span class="mock-dot mock-dot-close"></span>
-                            <span class="mock-dot mock-dot-minimize"></span>
-                            <span class="mock-dot mock-dot-expand"></span>
-                        </div>
-                        <div class="mock-browser-address">
-                            <i class="fa-solid fa-lock security-lock"></i>
-                            <span class="address-text">localhost:3000/${projectKey}/${screen.id}</span>
-                        </div>
-                    </div>
-                    <div class="mock-browser-viewport mock-viewport"></div>
-                `;
-                previewItem.appendChild(deviceWrapper);
-                const viewport = deviceWrapper.querySelector('.mock-viewport');
-                renderBrowserScreenContent(viewport, projectKey, screen.id);
-            }
+            const img = document.createElement('img');
+            img.src = screen.src;
+            img.alt = screen.label;
+            img.style.width = '100%';
+            img.style.borderRadius = '8px';
+            img.style.border = '1px solid var(--border-color)';
+            img.style.boxShadow = '0 4px 10px rgba(0,0,0,0.05)';
+            img.style.display = 'block';
+            img.style.marginTop = '10px';
+            previewItem.appendChild(img);
 
             previewsGrid.appendChild(previewItem);
         });
@@ -502,631 +459,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     attachDetailTriggers();
-
-    const renderBrowserScreenContent = (viewport, projectKey, screenId) => {
-        let htmlContent = '';
-
-        if (projectKey === 'posyandu') {
-            if (screenId === 'dashboard') {
-                htmlContent = `
-                    <div class="mock-view posyandu-dashboard">
-                        <div class="mock-view-header">
-                            <h5>Kemuning 12 Dashboard</h5>
-                            <span class="badge-live"><span class="pulse-dot"></span> Live</span>
-                        </div>
-                        <div class="mock-stats-grid">
-                            <div class="mock-stat-card">
-                                <span class="stat-label">Total Balita</span>
-                                <span class="stat-value">124</span>
-                                <span class="stat-sub text-success"><i class="fa-solid fa-arrow-up"></i> 12%</span>
-                            </div>
-                            <div class="mock-stat-card">
-                                <span class="stat-label">Kehadiran</span>
-                                <span class="stat-value">92%</span>
-                                <span class="stat-sub text-success">Sangat Baik</span>
-                            </div>
-                            <div class="mock-stat-card">
-                                <span class="stat-label">Status Sehat</span>
-                                <span class="stat-value">110</span>
-                                <span class="stat-sub">KMS Hijau</span>
-                            </div>
-                        </div>
-                        <div class="mock-chart-container">
-                            <h6>Grafik Kunjungan Bulanan</h6>
-                            <div class="mock-bar-chart">
-                                <div class="chart-bar" style="height: 35%;" data-month="Jan"></div>
-                                <div class="chart-bar" style="height: 55%;" data-month="Feb"></div>
-                                <div class="chart-bar" style="height: 45%;" data-month="Mar"></div>
-                                <div class="chart-bar" style="height: 70%;" data-month="Apr"></div>
-                                <div class="chart-bar active" style="height: 85%;" data-month="Mei"></div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'databalita') {
-                htmlContent = `
-                    <div class="mock-view posyandu-databalita">
-                        <div class="mock-view-header">
-                            <h5>Data Balita</h5>
-                            <button class="btn-mock-add"><i class="fa-solid fa-plus"></i> Tambah</button>
-                        </div>
-                        <div class="mock-search-bar">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Cari nama balita..." disabled value="Alvian">
-                        </div>
-                        <table class="mock-table">
-                            <thead>
-                                <tr>
-                                    <th>Nama Balita</th>
-                                    <th>Umur</th>
-                                    <th>Nama Ibu</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="highlight">
-                                    <td><strong>Alvian Putra</strong></td>
-                                    <td>18 bln</td>
-                                    <td>Siti Aminah</td>
-                                    <td><span class="tbl-badge green">Sehat</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Bella Clarissa</td>
-                                    <td>8 bln</td>
-                                    <td>Dewi Lestari</td>
-                                    <td><span class="tbl-badge yellow">Gizi Kurang</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Daffa Satria</td>
-                                    <td>24 bln</td>
-                                    <td>Ratna Sari</td>
-                                    <td><span class="tbl-badge green">Sehat</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                `;
-            } else if (screenId === 'pemeriksaan') {
-                htmlContent = `
-                    <div class="mock-view posyandu-pemeriksaan">
-                        <div class="mock-view-header">
-                            <h5>Rekam Pemeriksaan</h5>
-                        </div>
-                        <div class="mock-checkup-card">
-                            <div class="card-header-main">
-                                <h6>Alvian Putra <span class="sub">(18 Bulan)</span></h6>
-                                <span class="date-tag">15 Jun 2026</span>
-                            </div>
-                            <div class="card-metrics">
-                                <div class="metric-box">
-                                    <span class="lbl">Berat Badan</span>
-                                    <span class="val">11.2 Kg</span>
-                                    <span class="stat green"><i class="fa-solid fa-circle-check"></i> Normal</span>
-                                </div>
-                                <div class="metric-box">
-                                    <span class="lbl">Tinggi Badan</span>
-                                    <span class="val">82.5 Cm</span>
-                                    <span class="stat green"><i class="fa-solid fa-circle-check"></i> Normal</span>
-                                </div>
-                            </div>
-                            <div class="card-details">
-                                <div class="detail-row">
-                                    <strong>Imunisasi:</strong>
-                                    <span>Campak Booster, DPT 3</span>
-                                </div>
-                                <div class="detail-row">
-                                    <strong>Catatan:</strong>
-                                    <span>Tumbuh kembang anak sangat baik dan sesuai kurva KMS. Disarankan untuk menjaga asupan gizi seimbang.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'laporan') {
-                htmlContent = `
-                    <div class="mock-view posyandu-laporan">
-                        <div class="mock-view-header">
-                            <h5>Laporan Bulanan Kesehatan</h5>
-                        </div>
-                        <div class="mock-report-summary">
-                            <div class="report-row"><span>Gizi Baik:</span><strong>85 Balita</strong></div>
-                            <div class="report-row"><span>Kurang Gizi:</span><strong>4 Balita</strong></div>
-                            <div class="report-row"><span>Imunisasi Lengkap:</span><strong>98 Balita</strong></div>
-                        </div>
-                    </div>
-                `;
-            }
-        } else if (projectKey === 'perpustakaan') {
-            if (screenId === 'api-endpoints') {
-                htmlContent = `
-                    <div class="mock-view library-api">
-                        <div class="mock-view-header">
-                            <h5>API Endpoints</h5>
-                            <span class="badge-live">Swagger</span>
-                        </div>
-                        <div class="api-endpoints-list">
-                            <div class="api-item get">
-                                <span class="method">GET</span>
-                                <span class="path">/api/v1/books</span>
-                            </div>
-                            <div class="api-item post">
-                                <span class="method">POST</span>
-                                <span class="path">/api/v1/rentals</span>
-                            </div>
-                        </div>
-                        <div class="code-block-container">
-                            <div class="code-header">Response GET /books</div>
-                            <pre class="code-output"><code>{
-  "id": 1024,
-  "title": "Clean Code",
-  "author": "Robert C. Martin",
-  "status": "BORROWED"
-}</code></pre>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'data-buku') {
-                htmlContent = `
-                    <div class="mock-view library-books">
-                        <div class="mock-view-header">
-                            <h5>Katalog Buku</h5>
-                        </div>
-                        <div class="books-grid-mock">
-                            <div class="book-card-mock">
-                                <div class="book-cover-mock orange">Code</div>
-                                <div class="book-info-mock">
-                                    <h6>Clean Code</h6>
-                                    <span class="status-badge red">Dipinjam</span>
-                                </div>
-                            </div>
-                            <div class="book-card-mock">
-                                <div class="book-cover-mock blue">Algo</div>
-                                <div class="book-info-mock">
-                                    <h6>Intro Algorithms</h6>
-                                    <span class="status-badge green">Tersedia</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'data-anggota') {
-                htmlContent = `
-                    <div class="mock-view library-members">
-                        <div class="mock-view-header">
-                            <h5>Daftar Anggota</h5>
-                        </div>
-                        <div class="member-list-mock">
-                            <div class="member-card-mock">
-                                <div class="member-avatar">AF</div>
-                                <div class="member-details">
-                                    <h6>Amelia Flora</h6>
-                                    <span class="id">LIB-001 • Aktif</span>
-                                </div>
-                            </div>
-                            <div class="member-card-mock suspended">
-                                <div class="member-avatar">BS</div>
-                                <div class="member-details">
-                                    <h6>Budi Santoso</h6>
-                                    <span class="id text-error">LIB-002 • Overdue</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'transaksi-pinjam') {
-                htmlContent = `
-                    <div class="mock-view library-loans">
-                        <div class="mock-view-header">
-                            <h5>Peminjaman Buku Aktif</h5>
-                        </div>
-                        <div class="loan-list">
-                            <div class="loan-item">
-                                <span>Go Programming - Amelia Flora</span>
-                                <span class="due-date">Due: 22 Jun 2026</span>
-                            </div>
-                            <div class="loan-item text-error">
-                                <span>Clean Code - Budi Santoso</span>
-                                <span class="due-date">Due: 14 Jun (Overdue)</span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }
-        } else if (projectKey === 'gsheets') {
-            if (screenId === 'dashboard') {
-                htmlContent = `
-                    <div class="mock-view gsheets-dashboard">
-                        <div class="mock-view-header">
-                            <h5>Dashboard Integrasi</h5>
-                            <span class="sync-status active"><i class="fa-solid fa-circle-check"></i> Connected</span>
-                        </div>
-                        <div class="sync-actions">
-                            <button class="btn-sync-now"><i class="fa-solid fa-arrows-rotate"></i> Sync Sheets</button>
-                        </div>
-                        <div class="metrics-row">
-                            <div class="metric-box">
-                                <span class="label">Total Rows</span>
-                                <span class="value">2.540</span>
-                            </div>
-                            <div class="metric-box">
-                                <span class="label">Filtered</span>
-                                <span class="value">1.821</span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'source-sheets') {
-                htmlContent = `
-                    <div class="mock-view gsheets-source">
-                        <div class="gsheets-header-bar">
-                            <span class="title-green"><i class="fa-regular fa-file-excel"></i> Google Sheets Source</span>
-                        </div>
-                        <div class="sheets-grid-container">
-                            <table class="sheets-table">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>A</th>
-                                        <th>B</th>
-                                        <th>C</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="header-row">
-                                        <td class="row-num">1</td>
-                                        <td>ID</td>
-                                        <td>Nama</td>
-                                        <td>Status</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="row-num">2</td>
-                                        <td>1</td>
-                                        <td>Aditya</td>
-                                        <td>Active</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="row-num">3</td>
-                                        <td>2</td>
-                                        <td>Rina</td>
-                                        <td>Pending</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'processed-data') {
-                htmlContent = `
-                    <div class="mock-view gsheets-processed">
-                        <div class="mock-view-header">
-                            <h5>Data Terproses</h5>
-                        </div>
-                        <p class="description">Filtering: <strong>Status = Active</strong></p>
-                        <table class="mock-table">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Nama</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Aditya</td>
-                                    <td><span class="tbl-badge green">Active</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                `;
-            } else if (screenId === 'api-status') {
-                htmlContent = `
-                    <div class="mock-view gsheets-api-status">
-                        <div class="mock-view-header">
-                            <h5>Google API Status</h5>
-                        </div>
-                        <div class="api-debug-box">
-                            <div class="debug-row"><span>API Client:</span><span class="text-success">Connected</span></div>
-                            <div class="debug-row"><span>OAuth Type:</span><span>Service Account</span></div>
-                            <div class="debug-row"><span>Response Time:</span><span>142ms</span></div>
-                        </div>
-                    </div>
-                `;
-            }
-        } else if (projectKey === 'inventoryhp') {
-            if (screenId === 'dashboard') {
-                htmlContent = `
-                    <div class="mock-view inventory-dashboard">
-                        <div class="mock-view-header">
-                            <h5>Dashboard Inventaris</h5>
-                        </div>
-                        <div class="mock-stats-grid">
-                            <div class="mock-stat-card">
-                                <span class="stat-label">Total Unit</span>
-                                <span class="stat-value">412 Pcs</span>
-                            </div>
-                            <div class="mock-stat-card">
-                                <span class="stat-label">Nilai Stok</span>
-                                <span class="stat-value">Rp 1.25M</span>
-                            </div>
-                            <div class="mock-stat-card">
-                                <span class="stat-label">Limit Stok</span>
-                                <span class="stat-value text-error">3 Seri</span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'data-hp') {
-                htmlContent = `
-                    <div class="mock-view inventory-data">
-                        <div class="mock-view-header">
-                            <h5>Stok Handphone & IMEI</h5>
-                        </div>
-                        <table class="mock-table small-text">
-                            <thead>
-                                <tr>
-                                    <th>Model HP</th>
-                                    <th>IMEI</th>
-                                    <th>Stok</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>iPhone 14 Pro</strong></td>
-                                    <td>359182...</td>
-                                    <td>14 Pcs</td>
-                                </tr>
-                                <tr>
-                                    <td>Samsung S23</td>
-                                    <td>358249...</td>
-                                    <td>8 Pcs</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                `;
-            } else if (screenId === 'transaksi') {
-                htmlContent = `
-                    <div class="mock-view inventory-transactions">
-                        <div class="mock-view-header">
-                            <h5>Riwayat Transaksi</h5>
-                        </div>
-                        <div class="transaction-timeline">
-                            <div class="t-item in">
-                                <span class="t-badge green">IN</span>
-                                <div class="t-details">
-                                    <h6>+10 Pcs iPhone 14 Pro</h6>
-                                    <span class="meta">15 Jun 2026 • Supplier</span>
-                                </div>
-                            </div>
-                            <div class="t-item out">
-                                <span class="t-badge red">OUT</span>
-                                <div class="t-details">
-                                    <h6>-1 Pcs Samsung S23</h6>
-                                    <span class="meta">15 Jun 2026 • Rian Shop</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'laporan') {
-                htmlContent = `
-                    <div class="mock-view inventory-reports">
-                        <div class="mock-view-header">
-                            <h5>Laporan Inventaris</h5>
-                        </div>
-                        <div class="mock-stats-grid">
-                            <div class="mock-stat-card">
-                                <span class="stat-label">Barang Masuk</span>
-                                <span class="stat-value">84 Pcs</span>
-                            </div>
-                            <div class="mock-stat-card">
-                                <span class="stat-label">Barang Keluar</span>
-                                <span class="stat-value">52 Pcs</span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }
-        } else if (projectKey === 'desacerme') {
-            if (screenId === 'home') {
-                htmlContent = `
-                    <div class="mock-view cerme-home" style="display: flex; flex-direction: column; height: 100%; font-family: var(--font-main);">
-                        <div class="mock-view-header" style="background: #2e7d32; color: white; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px 4px 0 0;">
-                            <h5 style="margin: 0; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-tree-city"></i> Desa Cerme</h5>
-                            <span class="badge-live" style="font-size: 0.55rem; background: rgba(255,255,255,0.25); padding: 2px 6px; border-radius: 4px; font-weight: 600; display: flex; align-items: center; gap: 4px;"><span class="pulse-dot" style="width: 6px; height: 6px; background: #4caf50; border-radius: 50%; display: inline-block;"></span> Online</span>
-                        </div>
-                        <div style="padding: 20px 14px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #f1f8e9;">
-                            <h6 style="font-size: 0.85rem; margin-bottom: 6px; color: #1b5e20; font-weight: 800; line-height: 1.2;">Layanan Pengaduan & Aspirasi Warga</h6>
-                            <p style="font-size: 0.6rem; color: #558b2f; margin-bottom: 12px; max-width: 180px; line-height: 1.4;">Laporkan masalah infrastruktur, sosial, atau keamanan desa Anda secara langsung.</p>
-                            <button class="btn-mock-add" style="background: #2e7d32; color: white; border: none; padding: 6px 14px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 6px rgba(46,125,50,0.3);"><i class="fa-solid fa-pen-to-square"></i> Buat Laporan</button>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'form-laporan') {
-                htmlContent = `
-                    <div class="mock-view cerme-form" style="display: flex; flex-direction: column; height: 100%; font-family: var(--font-main);">
-                        <div class="mock-view-header" style="background: #2e7d32; color: white; padding: 10px 14px; border-radius: 4px 4px 0 0;">
-                            <h5 style="margin: 0; font-size: 0.75rem; font-weight: 700;"><i class="fa-solid fa-file-invoice"></i> Formulir Laporan</h5>
-                        </div>
-                        <div style="padding: 10px 14px; display: flex; flex-direction: column; gap: 6px; background: #ffffff; flex-grow: 1; justify-content: center;">
-                            <div style="display: flex; flex-direction: column; gap: 2px;">
-                                <label style="font-size: 0.55rem; font-weight: 700; color: #2e7d32;">Nama Pelapor</label>
-                                <input type="text" value="Amelia Flora" disabled style="font-size: 0.6rem; padding: 4px 8px; border: 1px solid var(--border-color); border-radius: 4px; background: #f9f9f9; color: #333;">
-                            </div>
-                            <div style="display: flex; flex-direction: column; gap: 2px;">
-                                <label style="font-size: 0.55rem; font-weight: 700; color: #2e7d32;">Kategori</label>
-                                <select disabled style="font-size: 0.6rem; padding: 4px 8px; border: 1px solid var(--border-color); border-radius: 4px; background: #f9f9f9; color: #333;">
-                                    <option>Fasilitas Umum / Infrastruktur</option>
-                                </select>
-                            </div>
-                            <div style="display: flex; flex-direction: column; gap: 2px;">
-                                <label style="font-size: 0.55rem; font-weight: 700; color: #2e7d32;">Isi Pengaduan</label>
-                                <textarea disabled style="font-size: 0.6rem; padding: 4px 8px; border: 1px solid var(--border-color); border-radius: 4px; background: #f9f9f9; color: #333; resize: none; height: 35px;">Jalan rusak dan berlubang parah di dekat pertigaan RT 03 RW 02 Desa Cerme.</textarea>
-                            </div>
-                            <button style="background: #2e7d32; color: white; border: none; padding: 6px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 4px;"><i class="fa-regular fa-paper-plane"></i> Kirim Laporan</button>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'validasi') {
-                htmlContent = `
-                    <div class="mock-view cerme-validasi" style="display: flex; flex-direction: column; height: 100%; font-family: var(--font-main);">
-                        <div class="mock-view-header" style="background: #2e7d32; color: white; padding: 10px 14px; border-radius: 4px 4px 0 0;">
-                            <h5 style="margin: 0; font-size: 0.75rem; font-weight: 700;"><i class="fa-solid fa-shield-halved"></i> Validasi Sistem</h5>
-                        </div>
-                        <div style="padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; background: #fff; flex-grow: 1; justify-content: center;">
-                            <div style="background: rgba(217, 48, 37, 0.08); border: 1px solid #d93025; border-radius: 6px; padding: 6px 10px; display: flex; align-items: center; gap: 6px; color: #d93025; font-size: 0.6rem; font-weight: 600;">
-                                <i class="fa-solid fa-triangle-exclamation"></i>
-                                <span>Email pelapor tidak valid!</span>
-                            </div>
-                            <div style="display: flex; flex-direction: column; gap: 2px;">
-                                <label style="font-size: 0.55rem; color: #d93025; font-weight: 700;">Alamat Email</label>
-                                <input type="text" value="ameliaflora.com" disabled style="font-size: 0.6rem; padding: 4px 8px; border: 1px solid #d93025; border-radius: 4px; background: #fff8f8; color: #d93025;">
-                            </div>
-                            <p style="font-size: 0.55rem; color: var(--text-muted); margin: 0; line-height: 1.3;">Sistem memvalidasi email menggunakan regex untuk memastikan balasan dari admin desa dapat terkirim balik dengan benar.</p>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'thank-you') {
-                htmlContent = `
-                    <div class="mock-view cerme-success" style="display: flex; flex-direction: column; height: 100%; font-family: var(--font-main);">
-                        <div class="mock-view-header" style="background: #2e7d32; color: white; padding: 10px 14px; border-radius: 4px 4px 0 0;">
-                            <h5 style="margin: 0; font-size: 0.75rem; font-weight: 700;"><i class="fa-solid fa-envelope-circle-check"></i> Pengiriman Sukses</h5>
-                        </div>
-                        <div style="padding: 20px 14px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: #e8f5e9; flex-grow: 1;">
-                            <div style="width: 32px; height: 32px; background: #c8e6c9; color: #2e7d32; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 2px 6px rgba(46,125,50,0.15); animation: pulse 2s infinite;">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <h6 style="font-size: 0.8rem; margin: 0; color: #1b5e20; font-weight: 800;">Laporan Terkirim!</h6>
-                            <p style="font-size: 0.55rem; color: #33691e; margin: 0; line-height: 1.4; max-width: 170px;">Data laporan telah dikirimkan ke email pemerintah desa secara instan via <strong>EmailJS API</strong>.</p>
-                        </div>
-                    </div>
-                `;
-            }
-        }
-        viewport.innerHTML = htmlContent;
-    };
-
-    const renderMobileScreenContent = (viewport, projectKey, screenId) => {
-        let htmlContent = '';
-
-        if (projectKey === 'sumtime') {
-            if (screenId === 'dashboard') {
-                htmlContent = `
-                    <div class="mobile-app sumtime-home">
-                        <div class="app-header">
-                            <div class="user-info">
-                                <span class="greeting">Halo, Amelia</span>
-                                <span class="location"><i class="fa-solid fa-location-dot"></i> Surakarta</span>
-                            </div>
-                            <div class="cart-icon"><i class="fa-solid fa-shopping-bag"></i><span class="cart-badge">3</span></div>
-                        </div>
-                        <div class="app-promo-card">
-                            <h6>Diskon Dimsum Day!</h6>
-                            <p>Diskon 20% khusus hari ini</p>
-                        </div>
-                        <div class="menu-section">
-                            <span class="menu-title">Menu Terlaris</span>
-                            <div class="dimsum-list">
-                                <div class="dimsum-card">
-                                    <div class="dimsum-img-mock red">Siomay</div>
-                                    <div class="dimsum-info">
-                                        <h6>Siomay Dimsum</h6>
-                                        <span class="price">Rp 18.000</span>
-                                    </div>
-                                </div>
-                                <div class="dimsum-card">
-                                    <div class="dimsum-img-mock orange">Hakau</div>
-                                    <div class="dimsum-info">
-                                        <h6>Hakau Udang</h6>
-                                        <span class="price">Rp 22.000</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'keranjang') {
-                htmlContent = `
-                    <div class="mobile-app sumtime-cart">
-                        <div class="app-header-back">
-                            <h5>Keranjang Belanja</h5>
-                        </div>
-                        <div class="cart-items-list">
-                            <div class="cart-item-mock">
-                                <div class="c-avatar red"></div>
-                                <div class="c-info">
-                                    <h6>Siomay Dimsum</h6>
-                                    <span class="price">Rp 18.000</span>
-                                    <div class="qty-selector">
-                                        <span>-</span><strong>2</strong><span>+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="checkout-footer">
-                            <div class="total-row">
-                                <span>Total Tagihan</span>
-                                <span class="total-val">Rp 58.000</span>
-                            </div>
-                            <button class="btn-checkout">Pesan Sekarang</button>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'status-pesanan') {
-                htmlContent = `
-                    <div class="mobile-app sumtime-tracking">
-                        <div class="app-header-back">
-                            <h5>Status Pesanan</h5>
-                        </div>
-                        <div class="tracking-summary">
-                            <span class="order-id">ID: #ST-98725</span>
-                            <span class="estimated-time">Estimasi: 20 Menit</span>
-                        </div>
-                        <div class="tracking-stepper">
-                            <div class="step done">
-                                <span class="step-dot"><i class="fa-solid fa-check"></i></span>
-                                <div class="step-desc">
-                                    <h6>Pesanan Diterima</h6>
-                                    <span class="time">09:42 • Dapur</span>
-                                </div>
-                            </div>
-                            <div class="step active">
-                                <span class="step-dot"><i class="fa-solid fa-person-biking fa-fade"></i></span>
-                                <div class="step-desc">
-                                    <h6>Driver Mengirim</h6>
-                                    <span class="time">Sedang di perjalanan</span>
-                                </div>
-                            </div>
-                            <div class="step">
-                                <span class="step-dot"><i class="fa-solid fa-house"></i></span>
-                                <div class="step-desc">
-                                    <h6>Pesanan Sampai</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (screenId === 'detail-menu') {
-                htmlContent = `
-                    <div class="mobile-app sumtime-menu-detail">
-                        <div class="app-header-back">
-                            <h5>Detail Menu</h5>
-                        </div>
-                        <div class="dimsum-large-img">Siomay Dimsum</div>
-                        <div class="dimsum-detail-body">
-                            <h5>Siomay Dimsum Jumbo</h5>
-                            <p class="desc">Dibuat dari campuran daging ayam segar dan udang pilihan.</p>
-                            <span class="price">Rp 18.000</span>
-                        </div>
-                    </div>
-                `;
-            }
-        }
-
-        viewport.innerHTML = htmlContent;
-    };
 
     // Creative/Design Section Tabs
     const creativeTabBtns = document.querySelectorAll('.creative-tab-btn');

@@ -7,9 +7,8 @@
     <title>Amelia Flora </title>
 
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,6 +19,7 @@
 <body>
 
     <div id="scroll-progress"></div>
+
 
     <header class="navbar">
         <div class="nav-container">
@@ -50,7 +50,6 @@
                     <li><a href="#about" class="nav-link active">Tentang Saya</a></li>
                     <li><a href="#projects" class="nav-link">Proyek</a></li>
                     <li><a href="#skills" class="nav-link">Keahlian</a></li>
-                    <li><a href="#creative" class="nav-link">Desain & UI/UX</a></li>
                     <li><a href="#contact" class="nav-link">Hubungi</a></li>
                 </ul>
             </nav>
@@ -58,27 +57,37 @@
     </header>
 
     <section id="about" class="section hero-about-section">
-        <div class="container hero-about-grid">
+        <!-- Floating Japanese Clouds background -->
+        <div class="kumo kumo-1">
+            <svg viewBox="0 0 100 50" class="kumo-svg">
+                <path d="M 20 40 L 80 40 A 15 15 0 0 0 80 10 A 20 20 0 0 0 45 10 A 15 15 0 0 0 20 40 Z" fill="#ffffff"
+                    opacity="0.4" stroke="#7a665c" stroke-width="1.5" />
+            </svg>
+        </div>
+        <div class="kumo kumo-2">
+            <svg viewBox="0 0 100 50" class="kumo-svg">
+                <path d="M 15 35 L 75 35 A 12 12 0 0 0 75 11 A 16 16 0 0 0 48 11 A 12 12 0 0 0 15 35 Z" fill="#ffffff"
+                    opacity="0.3" stroke="#7a665c" stroke-width="1.5" />
+            </svg>
+        </div>
 
+        <div class="container hero-about-grid">
             <div class="hero-content">
-                <span class="badge">Software Developer dengan Kemampuan UI/UX Design</span>
+                <span class="badge"><i class="fa-solid fa-palette"></i> こんにちは • Graphic Designer &amp; Creative</span>
                 <h1 class="hero-title">Halo, Saya <span class="text-highlight">Amelia Flora Aprilianingrum</span></h1>
-                <h2 class="hero-subtitle">Merancang, Mengembangkan, dan Menguji Solusi Digital dari Konsep hingga
-                    Implementasi.
-                </h2>
+                <h2 class="hero-subtitle">Mendesain Grafis, Mengedit Video, Membuat Animasi, dan Mengembangkan
+                    Pengalaman Digital Kreatif.</h2>
 
                 <div class="about-description">
                     <p>
-                        Saya berfokus pada pengembangan produk digital yang fungsional, mudah digunakan,
-                        dan berorientasi pada kebutuhan pengguna. Memiliki pengalaman dalam analisis sistem,
-                        perancangan database, UI/UX Design, pengembangan aplikasi web dan mobile,
-                        serta pengujian sistem dari tahap perencanaan hingga implementasi.
+                        Saya berfokus pada pembuatan karya visual kreatif, ilustrasi vektor, motion graphics,
+                        serta perancangan antarmuka (UI/UX) yang estetik dan fungsional. Memiliki kemampuan
+                        mengeksekusi ide visual dari sketsa awal hingga produk kreatif final yang siap dipublikasikan.
                     </p>
-
                 </div>
 
                 <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">Lihat Proyek <i class="fa-solid fa-laptop-code"></i></a>
+                    <a href="#projects" class="btn btn-primary">Lihat Proyek <i class="fa-solid fa-palette"></i></a>
 
                     <a href="assets/cv.pdf" class="btn btn-secondary" download="CV_Amelia_Flora.pdf">Unduh CV <i
                             class="fa-solid fa-file-arrow-down"></i></a>
@@ -88,9 +97,34 @@
             </div>
 
             <div class="hero-photo-container">
+                <!-- Glowing Sunset Sun in background -->
+                <div class="sunset-sun-bg">
+                    <svg viewBox="0 0 200 200" class="sunset-sun-svg">
+                        <circle cx="100" cy="100" r="75" fill="url(#sunset-grad)" />
+                        <defs>
+                            <linearGradient id="sunset-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#ff7063" stop-opacity="0.9" />
+                                <stop offset="60%" stop-color="#ff9d63" stop-opacity="0.6" />
+                                <stop offset="100%" stop-color="#ffd29d" stop-opacity="0.1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <!-- Cute Floating Origami Paper Crane -->
+                <div class="origami-crane" id="origamiCrane">
+                    <svg viewBox="0 0 100 100" class="crane-svg">
+                        <polygon points="50,15 80,45 50,75 20,45" fill="#fff5eb" stroke="#3d2c25" stroke-width="1.5" />
+                        <polygon points="50,15 80,45 50,55" fill="#ffd29d" stroke="#3d2c25" stroke-width="1.5" />
+                        <polygon points="50,15 20,45 50,55" fill="#fffcf9" stroke="#3d2c25" stroke-width="1.5" />
+                        <polygon points="50,55 80,10 65,50" fill="#ff7063" stroke="#3d2c25" stroke-width="1.5" />
+                        <polygon points="50,55 20,10 35,50" fill="#ff7063" stroke="#3d2c25" stroke-width="1.5" />
+                        <polygon points="50,75 40,95 48,70" fill="#ffd29d" stroke="#3d2c25" stroke-width="1.5" />
+                        <polygon points="50,75 62,90 52,70" fill="#fff5eb" stroke="#3d2c25" stroke-width="1.5" />
+                    </svg>
+                </div>
 
                 <div class="profile-photo-wrapper" id="photoFrame" style="padding: 0;">
-                    <img src="assets/foto.jpeg" alt="Amelia Flora Aprilianingrum" class="profile-photo">
+                    <img src="assets/mypict.jpeg" alt="Amelia Flora Aprilianingrum" class="profile-photo">
                     <input type="file" id="photoInput" accept="image/*" style="display: none;">
                 </div>
             </div>
@@ -104,211 +138,263 @@
                 <span class="section-subtitle">Karya Terbaru</span>
                 <h2 class="section-title">Proyek Pilihan</h2>
                 <div class="section-line"></div>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+                    <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+                    <button class="filter-btn" data-filter="vector">Vector Art</button>
+                    <button class="filter-btn" data-filter="animation">Video &amp; Animasi</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Proyek 1: UI Design Portofolio -->
+                    <div class="project-card" data-category="uiux">
+                        <div class="project-img-container">
+                            <img src="assets/porto.png" alt="UI Design Portofolio" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge">UI/UX Design</span>
+                            <h3 class="project-title">UI Design (High-Fidelity UI) Portofolio</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> UI Designer
+                            </div>
+                            <p class="project-desc">Perancangan UI High-Fidelity untuk portofolio personal client dengan
+                                struktur visual yang modern, bersih, dan estetis.</p>
+                            <div class="project-tech">
+                                <span>Figma</span>
+                                <span>Design System</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/design/riBFmjoEGSAkan39MzHpDt/UI-Client-Porto?t=glfH6bnpGu5O126h-1"
+                                    class="btn btn-primary btn-sm btn-block-link" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-figma"></i> Lihat di Figma
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 2: Wireframe Game Wakanda Frontline -->
+                    <div class="project-card" data-category="uiux">
+                        <div class="project-img-container">
+                            <img src="assets/wakanda.png" alt="Wireframe Game Wakanda Frontline" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge">Game UI/UX</span>
+                            <h3 class="project-title">Wireframe Game Wakanda Frontline</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> UX Researcher &amp; Designer
+                            </div>
+                            <p class="project-desc">Perancangan sketsa dan kerangka antarmuka game strategi tower
+                                defense mobile bertema Wakanda Frontline.</p>
+                            <div class="project-tech">
+                                <span>Figma</span>
+                                <span>Wireframing</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/design/iNOY9eftzyjm7r7m97AVCw/Untitled?node-id=0-1&t=hdYvpn0tSQ1obyrY-1"
+                                    class="btn btn-primary btn-sm btn-block-link" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-figma"></i> Lihat di Figma
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 3: Desain Aplikasi SumTime -->
+                    <div class="project-card" data-category="uiux">
+                        <div class="project-img-container">
+                            <img src="assets/sumtime.jpg" alt="Desain Aplikasi SumTime" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge">Mobile UI/UX</span>
+                            <h3 class="project-title">Desain Aplikasi SumTime</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> UI/UX Designer
+                            </div>
+                            <p class="project-desc">Perancangan sketsa antarmuka dan alur interaksi aplikasi pemesanan
+                                dimsum berbasis mobile dengan desain yang lucu.</p>
+                            <div class="project-tech">
+                                <span>Figma</span>
+                                <span>Manual Drawing</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://drive.google.com/file/d/1VY_ouM7aklqHBwtlec2BrPNTpAzOblnZ/view?usp=drive_link"
+                                    class="btn btn-primary btn-sm btn-block-link" target="_blank" rel="noopener">
+                                    <i class="fa-solid fa-link"></i> Lihat Sketsa
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 4: Desain Dashboard Posyandu -->
+                    <div class="project-card" data-category="uiux">
+                        <div class="project-img-container">
+                            <img src="assets/posyandu.jpg" alt="Desain Dashboard Posyandu" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge">Dashboard UI/UX</span>
+                            <h3 class="project-title">Desain Dashboard Posyandu</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> UI Designer
+                            </div>
+                            <p class="project-desc">Perancangan ulang antarmuka dashboard manajemen posyandu untuk kader
+                                guna mempermudah pemantauan kesehatan balita.</p>
+                            <div class="project-tech">
+                                <span>Figma</span>
+                                <span>Dashboard UI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/design/GPOFUsWY4lZusTcrGSaxR1/Posyandu?t=YAsz7NOttFAICT5T-1"
+                                    class="btn btn-primary btn-sm btn-block-link" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-figma"></i> Lihat di Figma
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 5: Branding Amelia Flora -->
+                    <div class="project-card" data-category="graphic">
+                        <div class="project-img-container">
+                            <img src="assets/logo.png" alt="Branding &amp; Visual Identity" class="project-img"
+                                style="object-fit: contain; background: #fffcf9; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge">Graphic Design</span>
+                            <h3 class="project-title">Branding Amelia Flora</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Graphic Designer
+                            </div>
+                            <p class="project-desc">Pembuatan identitas visual lengkap (logo, palet warna, tipografi)
+                                dan mockup stationery untuk personal branding.</p>
+                            <div class="project-tech">
+                                <span>Illustrator</span>
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 6: Social Media Feed Poster -->
+                    <div class="project-card" data-category="graphic">
+                        <div class="project-img-container">
+                            <img src="assets/desacerme.jpg" alt="Social Media Feed Poster" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge">Graphic Design</span>
+                            <h3 class="project-title">Social Media Feed Poster</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Content Designer
+                            </div>
+                            <p class="project-desc">Mendesain microblog edukatif, infografis, poster promosi, dan layout
+                                grid feed estetik untuk publikasi Instagram.</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                                <span>Canva</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 7: Vector Illustration & Custom Icons -->
+                    <div class="project-card" data-category="vector">
+                        <div class="project-img-container">
+                            <img src="assets/gsheets.jpg" alt="Vector Illustration &amp; Custom Icons"
+                                class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge">Vector Art</span>
+                            <h3 class="project-title">Vector Illustration &amp; Icons</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Illustrator
+                            </div>
+                            <p class="project-desc">Pembuatan ilustrasi flat design digital, line-art, dan aset ikon
+                                vektor kustom yang dioptimalkan untuk keperluan UI website.</p>
+                            <div class="project-tech">
+                                <span>Illustrator</span>
+                                <span>Figma</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 8: Animasi & Motion Graphics Promosi -->
+                    <div class="project-card" data-category="animation">
+                        <div class="project-img-container">
+                            <img src="assets/perpus.jpg" alt="Animasi &amp; Motion Graphics Promosi"
+                                class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge">Animation</span>
+                            <h3 class="project-title">Animasi &amp; Motion Graphics</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Motion Designer &amp; Animator
+                            </div>
+                            <p class="project-desc">Pembuatan video promosi animasi berdurasi pendek menggunakan teknik
+                                motion typography dan aset grafis 2D.</p>
+                            <div class="project-tech">
+                                <span>After Effects</span>
+                                <span>Illustrator</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 9: Video Editing & Creative Content -->
+                    <div class="project-card" data-category="animation">
+                        <div class="project-img-container">
+                            <img src="assets/inventoryhp.jpg" alt="Video Editing &amp; Creative Content"
+                                class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-badge">Video Editing</span>
+                            <h3 class="project-title">Video Editing &amp; Content</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Video Editor &amp; Colorist
+                            </div>
+                            <p class="project-desc">Proses editing video kreatif, color grading, visual effects, dan
+                                sinkronisasi audio untuk media promosi digital.</p>
+                            <div class="project-tech">
+                                <span>Premiere Pro</span>
+                                <span>DaVinci Resolve</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">Semua</button>
-                <button class="filter-btn" data-filter="fullstack">Fullstack</button>
-                <button class="filter-btn" data-filter="frontend">Frontend</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Proyek 5: SumTime -->
-                <div class="project-card" data-category="mobile">
-                    <div class="project-img-container">
-                        <img src="assets/sumtime.jpg" alt="SumTime - Aplikasi Pemesanan Dimsum" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-badge">Mobile Application</span>
-                        <h3 class="project-title">SumTime - Aplikasi Pemesanan Dimsum</h3>
-                        <div class="project-role-info"
-                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                            <strong>Role:</strong> Mobile Developer
-                        </div>
-                        <p class="project-desc">Aplikasi pemesanan dimsum berbasis mobile yang
-                            dirancang untuk mempermudah proses transaksi antara pelanggan dan pemilik usaha agar lebih
-                            cepat dan teratur dibandingkan metode manual. </p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Supabase</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="btn btn-secondary btn-sm btn-detail" data-project="sumtime">
-                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
-                            </button>
-                            <a href="https://github.com/IsnaAinur/sumtime" class="project-link" target="_blank"
-                                rel="noopener">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Proyek 1: Sistem Informasi Posyandu -->
-                <div class="project-card" data-category="fullstack">
-                    <div class="project-img-container">
-                        <img src="assets/posyandu.jpg" alt="Sistem Informasi Posyandu" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-badge">Web Application</span>
-                        <h3 class="project-title">Sistem Informasi Posyandu</h3>
-                        <div class="project-role-info"
-                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                            <strong>Role:</strong> Web Developer
-                        </div>
-                        <p class="project-desc">Sistem digital untuk pendaftaran dan pemeriksaan balita di Posyandu
-                            Kemuning 13.</p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>MySQL</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="btn btn-secondary btn-sm btn-detail" data-project="posyandu">
-                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
-                            </button>
-                            <a href="https://github.com/Yeflou/posyandubalita" class="project-link" target="_blank"
-                                rel="noopener">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyek 3: Google Sheets Data Filtering -->
-                <div class="project-card" data-category="frontend">
-                    <div class="project-img-container">
-                        <img src="assets/gsheets.jpg" alt="Google Sheets Data Filtering & Integration"
-                            class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-badge">API Integration</span>
-                        <h3 class="project-title">Google Sheets Data Filtering & Integration</h3>
-                        <div class="project-role-info"
-                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                            <strong>Role:</strong> Software Developer
-                        </div>
-                        <p class="project-desc">Sistem integrasi data menggunakan Google Sheets API untuk database
-                            dan filtering data secara otomatis.</p>
-                        <div class="project-tech">
-                            <span>PHP</span>
-                            <span>Google Sheets API</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="btn btn-secondary btn-sm btn-detail" data-project="gsheets">
-                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
-                            </button>
-                            <a href="https://github.com/Yeflou/gsheetsdatabase" class="project-link" target="_blank"
-                                rel="noopener">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyek 2: Sistem Informasi Perpustakaan -->
-                <div class="project-card" data-category="fullstack">
-                    <div class="project-img-container">
-                        <img src="assets/perpus.jpg" alt="Sistem Informasi Perpustakaan" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-badge">Backend Application</span>
-                        <h3 class="project-title">Sistem Informasi Perpustakaan</h3>
-                        <div class="project-role-info"
-                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                            <strong>Role:</strong> Backend & Software Developer
-                        </div>
-                        <p class="project-desc">Aplikasi manajemen perpustakaan berbasis REST API untuk pengelolaan buku
-                            dan anggota.</p>
-                        <div class="project-tech">
-                            <span>Golang</span>
-                            <span>Gin</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="btn btn-secondary btn-sm btn-detail" data-project="perpustakaan">
-                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
-                            </button>
-                            <a href="https://github.com/Yeflou/uas_peminjaman_aset_kampus" class="project-link"
-                                target="_blank" rel="noopener">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <!-- Proyek 4: Sistem Inventaris Handphone -->
-                <div class="project-card" data-category="fullstack">
-                    <div class="project-img-container">
-                        <img src="assets/inventoryhp.jpg" alt="Sistem Inventaris Handphone" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-badge">Information System</span>
-                        <h3 class="project-title">Sistem Inventaris Handphone</h3>
-                        <div class="project-role-info"
-                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                            <strong>Role:</strong> Software Developer
-                        </div>
-                        <p class="project-desc">Aplikasi inventaris untuk mengelola stok dan data perangkat handphone.
-                        </p>
-                        <div class="project-tech">
-                            <span>CodeIgniter</span>
-                            <span>MySQL</span>
-                            <span>CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="btn btn-secondary btn-sm btn-detail" data-project="inventoryhp">
-                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
-                            </button>
-                            <a href="https://github.com/elisandksr/inventaris_toko_hp" class="project-link"
-                                target="_blank" rel="noopener">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyek: Laporan Desa Cerme -->
-                <div class="project-card" data-category="frontend">
-                    <div class="project-img-container">
-                        <img src="assets/desacerme.jpg" alt="Laporan Desa Cerme - Sistem Layanan Pengaduan Masyarakat"
-                            class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-badge">Web Application</span>
-                        <h3 class="project-title">Laporan Desa Cerme</h3>
-                        <div class="project-role-info"
-                            style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                            <strong>Role:</strong> Software Developer
-                        </div>
-                        <p class="project-desc">Sistem Laporan Masyarakat Desa Cerme,
-                            sebuah web untuk memudahkan warga menyampaikan aspirasi maupun keluhan masyarakat Desa Cerme
-                        </p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>EmailJS</span>
-                        </div>
-                        <div class="project-links">
-                            <button class="btn btn-secondary btn-sm btn-detail" data-project="desacerme">
-                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
-                            </button>
-                            <a href="https://github.com/Yeflou/laporan-desa-cerme" class="project-link" target="_blank"
-                                rel="noopener">
-                                <i class="fa-brands fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </section>
 
     <section id="skills" class="section skills-section">
@@ -445,177 +531,7 @@
         </div>
     </section>
 
-    <section id="creative" class="section creative-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Eksplorasi Kreatif</span>
-                <h2 class="section-title">Portofolio Desain & UI/UX</h2>
-                <div class="section-line"></div>
-            </div>
 
-            <!-- Tabs Navigation -->
-            <div class="creative-tabs">
-                <button class="creative-tab-btn active" data-tab="uiux">Desain UI/UX</button>
-                <button class="creative-tab-btn" data-tab="kreatif">Karya Kreatif Lain</button>
-            </div>
-
-            <!-- Tab Content: Desain UI/UX (Large Cards) -->
-            <div class="creative-tab-content active" id="tab-uiux">
-                <div class="projects-grid">
-
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="assets/porto.png" alt="UI/UX Design" class="project-img">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-badge">Website</span>
-                            <h3 class="project-title">UI Design (High-Fidelity UI) Portofolio</h3>
-
-                            <p class="project-desc">Perancangan UI High-Fidelity untuk portofolio personal client
-                            </p>
-                            <div class="project-tech">
-
-                                <span>Figma</span>
-
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.figma.com/design/riBFmjoEGSAkan39MzHpDt/UI-Client-Porto?t=glfH6bnpGu5O126h-1"
-                                    target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                    Lihat Figma Wireframe <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="assets/wakanda.png" alt="Wireframe Game Wakanda Frontline" class="project-img">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-badge">Mobile App</span>
-                            <h3 class="project-title">Wireframe Game Wakanda Frontline</h3>
-
-                            <p class="project-desc">Perancangan sketsa antarmuka game tower defense - Wakanda Frontline
-                            </p>
-                            <div class="project-tech">
-
-                                <span>Figma</span>
-
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.figma.com/design/iNOY9eftzyjm7r7m97AVCw/Untitled?node-id=0-1&t=hdYvpn0tSQ1obyrY-1"
-                                    target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                    Lihat Figma Wireframe <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- UI/UX Card 1: SumTime -->
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="assets/sumtime.jpg" alt="SumTime UI/UX Design" class="project-img">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-badge">Mobile App</span>
-                            <h3 class="project-title">Wireframe SumTime</h3>
-
-                            <p class="project-desc">Perancangan sketsa antarmuka aplikasi pemesanan dimsum berbasis
-                                mobile
-                                dengan alur pemesanan untuk role admin dan user.</p>
-                            <div class="project-tech">
-
-                                <span>Manual Drawing</span>
-
-                            </div>
-                            <div class="project-links">
-                                <a href="https://drive.google.com/file/d/1VY_ouM7aklqHBwtlec2BrPNTpAzOblnZ/view?usp=drive_link"
-                                    target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                    Lihat Sketsa Wireframe <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- UI/UX Card 2: Posyandu Redesign -->
-                    <div class="project-card">
-                        <div class="project-img-container">
-                            <img src="assets/posyandu.jpg" alt="Sistem Informasi Posyandu UI/UX Design"
-                                class="project-img">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-badge">Website</span>
-                            <h3 class="project-title">Wireframe Sistem Informasi Posyandu </h3>
-
-                            <p class="project-desc">Perancangan ulang antarmuka dashboard manajemen posyandu untuk
-                                memudahkan kader memantau kesehatan balita secara intuitif.</p>
-                            <div class="project-tech">
-                                <span>Figma</span>
-
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.figma.com/design/GPOFUsWY4lZusTcrGSaxR1/Posyandu?t=YAsz7NOttFAICT5T-1"
-                                    target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                    Lihat Figma Prototype <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Tab Content: Karya Kreatif Lain (Small Cards) -->
-            <div class="creative-tab-content" id="tab-kreatif">
-                <div class="creative-grid-small">
-
-                    <!-- Card 1: Graphic Design -->
-                    <div class="creative-card-small">
-                        <div class="creative-icon-small">
-                            <i class="fa-solid fa-palette"></i>
-                        </div>
-                        <h3>Graphic Design & Branding</h3>
-                        <p>Pembuatan identitas visual (logo, palet warna, tipografi) dan materi branding untuk promosi
-                            produk digital.</p>
-                        <a href="https://www.behance.net" target="_blank" rel="noopener"
-                            class="btn btn-secondary btn-sm" style="width: 100%;">
-                            Lihat Desain <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-
-                    <!-- Card 2: Social Media Feed Poster -->
-                    <div class="creative-card-small">
-                        <div class="creative-icon-small">
-                            <i class="fa-solid fa-photo-film"></i>
-                        </div>
-                        <h3>Social Media Feed Poster</h3>
-                        <p>Mendesain microblog edukatif, poster interaktif, dan feed aesthetic untuk Instagram
-                            menggunakan Illustrator & Canva.</p>
-                        <a href="https://www.behance.net" target="_blank" rel="noopener"
-                            class="btn btn-secondary btn-sm" style="width: 100%;">
-                            Lihat Poster <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-
-                    <!-- Card 3: Vector Illustration -->
-                    <div class="creative-card-small">
-                        <div class="creative-icon-small">
-                            <i class="fa-solid fa-pen-nib"></i>
-                        </div>
-                        <h3>Vector Illustration</h3>
-                        <p>Mendalami ilustrasi vektor digital, gambar flat design, ikon kustom untuk situs web, dan aset
-                            UI kreatif.</p>
-                        <a href="https://www.behance.net" target="_blank" rel="noopener"
-                            class="btn btn-secondary btn-sm" style="width: 100%;">
-                            Lihat Ilustrasi <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
 
     <section id="contact" class="section contact-section">
         <div class="container">
@@ -643,7 +559,7 @@
                         <span class="logo-letter">r</span>
                         <span class="logo-letter">a</span>
                     </a>
-                    <p class="brand-tagline">Mahasiswa Informatika &amp; Fullstack Developer</p>
+                    <p class="brand-tagline">Mahasiswa Informatika &amp; Graphic Designer / Creative</p>
                 </div>
 
                 <div class="contact-col info-col">
@@ -706,58 +622,9 @@
         </div>
     </footer>
 
-    <!-- Project Details Modal -->
-    <div id="projectModal" class="modal">
-        <div class="modal-overlay" id="modalOverlay"></div>
-        <div class="modal-wrapper">
-            <button class="modal-close" id="modalClose" aria-label="Tutup Modal">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="modal-container">
-                <!-- Left Side: Text Information & Metadata -->
-                <div class="modal-details-side">
-                    <span class="modal-badge" id="modalBadge">Web Application</span>
-                    <h2 class="modal-title" id="modalTitle">Sistem Informasi Posyandu</h2>
 
-                    <p class="modal-description-text" id="modalAbout">Sistem digital untuk pendaftaran...</p>
-                    <div class="modal-tech-text" id="modalTechText">HTML • CSS • JavaScript • MySQL</div>
-
-                    <div class="modal-info-block">
-                        <h4 class="info-heading">Peran Saya</h4>
-                        <ul class="modal-roles-list" id="modalRolesList">
-                            <!-- Roles will be injected dynamically -->
-                        </ul>
-                    </div>
-
-                    <div class="modal-info-block">
-                        <h4 class="info-heading">Fitur Utama</h4>
-                        <ul class="modal-features-list" id="modalFeaturesList">
-                            <!-- Features will be injected dynamically -->
-                        </ul>
-                    </div>
-
-                    <div class="modal-info-block">
-                        <h4 class="info-heading">Tautan</h4>
-                        <div class="modal-links-container">
-                            <a href="https://github.com" class="btn btn-primary btn-modal-github" id="modalGithubLink"
-                                target="_blank" rel="noopener">
-                                <i class="fa-brands fa-github"></i> Repository GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Side: Preview Sistem 2x2 Grid -->
-                <div class="modal-preview-side">
-                    <h4 class="info-heading">Preview Sistem</h4>
-                    <div class="previews-grid" id="previewsGrid">
-                        <!-- 4 live CSS mockup frames will be injected dynamically via JS -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js?v=2"></script>
 </body>
+
 </html>

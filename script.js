@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentFilter = 'all';
     let currentSearch = '';
     let currentSort = 'year-desc';
-    const defaultLimit = 6;
+    const defaultLimit = 8;
     let showAll = false;
 
     function updateProjects() {

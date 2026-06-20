@@ -81,10 +81,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectsGrid = document.querySelector('#projects .projects-grid');
     const searchInput = document.getElementById('projectSearch');
     const sortSelect = document.getElementById('projectSort');
+    const btnShowMore = document.getElementById('btn-show-more');
+    const moreContainer = document.querySelector('.projects-more-container');
 
     let currentFilter = 'all';
     let currentSearch = '';
     let currentSort = 'year-desc';
+    const defaultLimit = 6;
+    let showAll = false;
 
     function updateProjects() {
         if (!projectsGrid || projectCards.length === 0) return;
@@ -119,7 +123,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // 2. Filter and search visibility
-        let visibleCount = 0;
+        let visibleMatchingCount = 0;
+        let totalMatchingCount = 0;
+
         cardsArray.forEach(card => {
             const category = card.getAttribute('data-category');
             const title = card.querySelector('.project-title').textContent.toLowerCase();
@@ -141,25 +147,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 techText.includes(currentSearch);
 
             if (matchesFilter && matchesSearch) {
-                if (card.style.display !== 'flex') {
-                    card.style.display = 'flex';
-                    card.style.opacity = '0';
-                    card.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'scale(1)';
-                        card.style.transition = 'var(--transition)';
-                    }, 50);
+                totalMatchingCount++;
+                
+                // Show/hide based on defaultLimit and showAll state
+                if (showAll || visibleMatchingCount < defaultLimit) {
+                    if (card.style.display !== 'flex') {
+                        card.style.display = 'flex';
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                            card.style.transition = 'var(--transition)';
+                        }, 50);
+                    }
+                    visibleMatchingCount++;
+                } else {
+                    card.style.display = 'none';
                 }
-                visibleCount++;
             } else {
                 card.style.display = 'none';
             }
         });
 
+        // 3. Show/hide "Tampilkan Lebih Banyak" button
+        if (moreContainer) {
+            if (totalMatchingCount > defaultLimit && !showAll) {
+                moreContainer.style.display = 'flex';
+                moreContainer.style.justifyContent = 'center';
+            } else {
+                moreContainer.style.display = 'none';
+            }
+        }
+
         // Handle "No projects found" message if none match
         let noProjectsMsg = document.getElementById('no-projects-msg');
-        if (visibleCount === 0) {
+        if (totalMatchingCount === 0) {
             if (!noProjectsMsg) {
                 noProjectsMsg = document.createElement('div');
                 noProjectsMsg.id = 'no-projects-msg';
@@ -186,6 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
             currentFilter = button.getAttribute('data-filter');
+            showAll = false;
             updateProjects();
         });
     });
@@ -193,6 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             currentSearch = e.target.value.toLowerCase().trim();
+            showAll = false;
             updateProjects();
         });
     }
@@ -200,13 +225,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sortSelect) {
         sortSelect.addEventListener('change', (e) => {
             currentSort = e.target.value;
+            showAll = false;
+            updateProjects();
+        });
+    }
+
+    if (btnShowMore) {
+        btnShowMore.addEventListener('click', () => {
+            showAll = true;
             updateProjects();
         });
     }
 
     // Run once on load to establish initial order
     updateProjects();
-
 
     const photoFrame = document.getElementById('photoFrame');
     const photoInput = document.getElementById('photoInput');

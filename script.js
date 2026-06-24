@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentFilter = 'all';
     let currentSearch = '';
-    let currentSort = 'year-desc';
+    let currentSort = 'featured';
     const defaultLimit = 8;
     let showAll = false;
 
@@ -97,7 +97,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 1. Sort the cards
         cardsArray.sort((a, b) => {
-            if (currentSort === 'year-desc') {
+            if (currentSort === 'featured') {
+                const featA = a.getAttribute('data-featured') === 'true' ? 1 : 0;
+                const featB = b.getAttribute('data-featured') === 'true' ? 1 : 0;
+                if (featA !== featB) {
+                    return featB - featA; // featured first
+                }
+                const yearA = parseInt(a.getAttribute('data-year') || '0');
+                const yearB = parseInt(b.getAttribute('data-year') || '0');
+                return yearB - yearA;
+            } else if (currentSort === 'year-desc') {
                 const yearA = parseInt(a.getAttribute('data-year') || '0');
                 const yearB = parseInt(b.getAttribute('data-year') || '0');
                 return yearB - yearA;

@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="profile-photo-wrapper" id="photoFrame" style="padding: 0;">
-                    <img src="assets/mypict.jpeg" alt="Amelia Flora Aprilianingrum" class="profile-photo">
+                    <img src="assets/myfoto.jpeg" alt="Amelia Flora Aprilianingrum" class="profile-photo">
                     <input type="file" id="photoInput" accept="image/*" style="display: none;">
                 </div>
             </div>
@@ -154,6 +154,7 @@
                     <div class="project-sort-box">
                         <i class="fa-solid fa-arrow-down-wide-short"></i>
                         <select id="projectSort" aria-label="Urutkan proyek">
+                            <option value="featured">Proyek Pilihan (Top)</option>
                             <option value="year-desc">Tahun: Terbaru &rarr; Terlama</option>
                             <option value="year-asc">Tahun: Terlama &rarr; Terbaru</option>
                             <option value="alpha-asc">Nama: A &rarr; Z</option>
@@ -163,6 +164,36 @@
                 </div>
 
                 <div class="projects-grid">
+                    <!-- Proyek: Redraw Logo Kober Mie -->
+                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="true">
+                        <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
+                            <img src="assets/redrawlogokobermie.png" alt="Redraw Logo Kober Mie" class="project-img"
+                                style="object-fit: contain; background: #fffcf9; padding: 20px;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-badge">Graphic Design</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
+                            </div>
+                            <h3 class="project-title">Redraw Logo Kober Mie</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Vector Artist
+                            </div>
+                            <p class="project-desc">Menggambar ulang (redraw) logo Kober Mie menjadi aset vektor dengan
+                                presisi tinggi dan warna yang akurat.</p>
+                            <div class="project-tech">
+                                <span>Illustrator</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://drive.google.com" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Proyek 1: Branding Amelia Flora -->
                     <div class="project-card" data-category="graphic" data-year="2026">
                         <div class="project-img-container">
@@ -177,17 +208,17 @@
                             <h3 class="project-title">Branding Amelia Flora</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                                <strong>Role:</strong> Graphic Designer
+                                <strong>Role:</strong> Logo Designer
                             </div>
                             <p class="project-desc">Desain identitas visual (logo, palet warna, tipografi) untuk
-                                personal branding Amelia Flora.</p>
+                                personal branding website Amelia Flora.</p>
                             <div class="project-tech">
-                                <span>Illustrator</span><span>Photoshop</span>
+                                <span>Canva</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
-                                    target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                <a href="https://canva.link/g5iiaz5xzaeaxny"
+                                    class="btn btn-primary btn-sm btn-block-link" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Camva
                                 </a>
                             </div>
                         </div>
@@ -203,15 +234,15 @@
                                 <span class="project-badge">UIUX</span>
                                 <span class="project-year"><i class="fa-regular fa-calendar"></i> 2025</span>
                             </div>
-                            <h3 class="project-title">Desain Aplikasi SumTime</h3>
+                            <h3 class="project-title">Sketsa Wireframe Aplikasi SumTime</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> UI/UX Designer
                             </div>
-                            <p class="project-desc">Perancangan antarmuka (UI/UX) aplikasi pemesanan dimsum berbasis
-                                mobile dengan visual yang imut.</p>
+                            <p class="project-desc">Perancangan wireframe aplikasi pemesanan dimsum berbasis
+                                mobile dengan visual yang sesuai dengan user.</p>
                             <div class="project-tech">
-                                <span>Figma</span><span>Mobile UI</span>
+                                <span>Gambar Manual</span>
                             </div>
                             <div class="project-links">
                                 <a href="https://drive.google.com/file/d/1VY_ouM7aklqHBwtlec2BrPNTpAzOblnZ/view?usp=drive_link"
@@ -230,22 +261,21 @@
                         <div class="project-content">
                             <div class="project-meta">
                                 <span class="project-badge">Vector Design</span>
-                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2025</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
                             </div>
                             <h3 class="project-title">3D Typography Design</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Typography Designer
                             </div>
-                            <p class="project-desc">Eksplorasi desain teks 3D dengan kedalaman visual, pencahayaan
-                                dramatis, dan tekstur modern.</p>
+                            <p class="project-desc">Eksplorasi desain teks 3D di adobe Illustrator.</p>
                             <div class="project-tech">
-                                <span>Illustrator</span><span>Photoshop</span>
+                                <span>Adobe Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
-                                    target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                <a href="https://drive.google.com/file/d/1V2nMCQu51WlD8DUS-PfKj9qU5LyI545K/view?usp=sharing"
+                                    class="btn btn-primary btn-sm btn-block-link" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -269,12 +299,12 @@
                             <p class="project-desc">Desain logo minimalis bertema alam dengan dedaunan organik untuk
                                 branding produk ramah lingkungan.</p>
                             <div class="project-tech">
-                                <span>Illustrator</span><span>Branding</span>
+                                <span>Adobe Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
-                                    target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                <a href="https://drive.google.com/file/d/1gfX6B1dyZIGNz9-kRUTfSSvcEQfjP6cx/view?usp=sharing"
+                                    class="btn btn-primary btn-sm btn-block-link" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -287,31 +317,32 @@
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
-                                <span class="project-badge">Graphic Design</span>
-                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
+                                <span class="project-badge">Illustrator</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2022</span>
                             </div>
-                            <h3 class="project-title">Mural SMKN 6 Surakarta</h3>
+                            <h3 class="project-title">Illustrator Mural SMKN 6 Surakarta</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                                <strong>Role:</strong> Mural Artist &amp; Designer
+                                <strong>Role:</strong> Mural Artist
                             </div>
-                            <p class="project-desc">Desain dan pengerjaan lukisan dinding (mural) kreatif berskala besar
-                                bertema lingkungan di sekolah.</p>
+                            <p class="project-desc">Desain dan pengerjaan lukisan dinding (mural) kreatif Gojek Soloraya
+                                di SMKN 6 surakarta.</p>
                             <div class="project-tech">
-                                <span>Manual Painting</span><span>Sketching</span>
+                                <span>Sketching</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 6: Desain Kemasan Runchy -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/desainkemasanrunchy.png" alt="Desain Kemasan Runchy" class="project-img">
                         </div>
                         <div class="project-content">
@@ -324,15 +355,15 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Graphic Designer
                             </div>
-                            <p class="project-desc">Perancangan kemasan produk makanan ringan (snack) Runchy dengan
-                                konsep visual yang modern dan ceria.</p>
+                            <p class="project-desc">Perancangan kemasan produk makanan ringan (snack) Runchy sesuai
+                                dengan brand request.</p>
                             <div class="project-tech">
-                                <span>Illustrator</span><span>Photoshop</span>
+                                <span>Photoshop</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
-                                    target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                <a href="https://drive.google.com/file/d/1Oz6EfoctBysob-Ko_s8GnZ3I_hW9ZNk6/view?usp=drive_link"
+                                    class="btn btn-primary btn-sm btn-block-link" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -354,14 +385,14 @@
                                 <strong>Role:</strong> Graphic Designer
                             </div>
                             <p class="project-desc">Desain poster iklan produk kuliner segar "Es Memel" dengan ilustrasi
-                                menarik untuk promosi media sosial.</p>
+                                menarik untuk promosi</p>
                             <div class="project-tech">
                                 <span>Photoshop</span><span>Canva</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
-                                    target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                <a href="https://drive.google.com/file/d/1PT7A9KL1ZGLxyYmS6s8okTTMUkwUekws/view?usp=sharing"
+                                    class="btn btn-primary btn-sm btn-block-link" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -384,14 +415,14 @@
                                 <strong>Role:</strong> T-Shirt Designer
                             </div>
                             <p class="project-desc">Ilustrasi kaos kustom dengan gaya visual seni modern untuk keperluan
-                                merchandise clothing line.</p>
+                                merchandise clothing line khas Solo</p>
                             <div class="project-tech">
                                 <span>Illustrator</span><span>Photoshop</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
-                                    target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                <a href="https://drive.google.com/file/d/1UEbv9LM8OaBbCL7KNNNROUVUTzB4amEk/view?usp=drive_link"
+                                    class="btn btn-primary btn-sm btn-block-link" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -407,28 +438,29 @@
                                 <span class="project-badge">Vector Design</span>
                                 <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
                             </div>
-                            <h3 class="project-title">Vector Art WPAP Bung Karno</h3>
+                            <h3 class="project-title">Vector Art WPAP diri sendiri</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Vector Artist
                             </div>
-                            <p class="project-desc">Ilustrasi potret wajah Bung Karno menggunakan gaya Wedha's Pop Art
+                            <p class="project-desc">Ilustrasi potret wajah saya sendiri menggunakan gaya Wedha's Pop Art
                                 Portrait dengan warna kontras geometris.</p>
                             <div class="project-tech">
                                 <span>Illustrator</span><span>Vector Art</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 10: Animasi Iklan Layanan -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/animasiiklanlayananmasyarakat.png" alt="Animasi Iklan Layanan Masyarakat"
                                 class="project-img">
                         </div>
@@ -448,9 +480,9 @@
                                 <span>After Effects</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -478,9 +510,9 @@
                                 <span>Premiere Pro</span><span>After Effects</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -508,9 +540,9 @@
                                 <span>Premiere Pro</span><span>Color Grading</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -537,9 +569,9 @@
                                 <span>Illustrator</span><span>CorelDRAW</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -566,17 +598,18 @@
                                 <span>Illustrator</span><span>CorelDRAW</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 15: Desain Feed Instagram Baju 2 -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/desainfeedbjau2.png" alt="Desain Feed Instagram Baju 2"
                                 class="project-img">
                         </div>
@@ -596,17 +629,18 @@
                                 <span>Photoshop</span><span>Canva</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 16: Desain Feed Instagram Baju -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/desainnfeedbaju.png" alt="Desain Feed Instagram Baju" class="project-img">
                         </div>
                         <div class="project-content">
@@ -625,9 +659,9 @@
                                 <span>Photoshop</span><span>Canva</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -654,9 +688,9 @@
                                 <span>Illustrator</span><span>Photoshop</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -684,9 +718,9 @@
                                 <span>Illustrator</span><span>Photoshop</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -714,9 +748,9 @@
                                 <span>Illustrator</span><span>Photoshop</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -744,9 +778,9 @@
                                 <span>Illustrator</span><span>Line Art</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -773,9 +807,9 @@
                                 <span>Illustrator</span><span>Vector Art</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -803,9 +837,9 @@
                                 <span>Illustrator</span><span>Canva</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -833,9 +867,9 @@
                                 <span>Illustrator</span><span>Canva</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -862,9 +896,9 @@
                                 <span>After Effects</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -891,9 +925,9 @@
                                 <span>After Effects</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -920,17 +954,18 @@
                                 <span>After Effects</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 27: Video Animasi Nipis Madu -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/animasinipismadu.png" alt="Video Animasi Nipis Madu" class="project-img">
                         </div>
                         <div class="project-content">
@@ -949,9 +984,9 @@
                                 <span>After Effects</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -978,9 +1013,9 @@
                                 <span>After Effects</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -1007,17 +1042,18 @@
                                 <span>After Effects</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 30: Mockup Branding BCOS -->
-                    <div class="project-card" data-category="graphic" data-year="2025">
+                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/mockupbcos.png" alt="Mockup Branding BCOS" class="project-img">
                         </div>
                         <div class="project-content">
@@ -1030,22 +1066,24 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Brand Identity Designer
                             </div>
-                            <p class="project-desc">Desain mockup identitas visual dan presentasi produk BCOS dengan estetika modern.</p>
+                            <p class="project-desc">Desain mockup identitas visual dan presentasi produk BCOS dengan
+                                estetika modern.</p>
                             <div class="project-tech">
                                 <span>Photoshop</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 31: Desain Kemasan BCOS -->
-                    <div class="project-card" data-category="graphic" data-year="2025">
+                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/packagingbcos.png" alt="Desain Kemasan BCOS" class="project-img">
                         </div>
                         <div class="project-content">
@@ -1058,22 +1096,24 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Packaging Designer
                             </div>
-                            <p class="project-desc">Perancangan kemasan produk (packaging) BCOS yang ramah lingkungan dan minimalis.</p>
+                            <p class="project-desc">Perancangan kemasan produk (packaging) BCOS yang ramah lingkungan
+                                dan minimalis.</p>
                             <div class="project-tech">
                                 <span>Illustrator</span><span>CorelDRAW</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 32: Poster Promosi BCOS -->
-                    <div class="project-card" data-category="graphic" data-year="2025">
+                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/posterbcos.png" alt="Poster Promosi BCOS" class="project-img">
                         </div>
                         <div class="project-content">
@@ -1086,14 +1126,15 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Graphic Designer
                             </div>
-                            <p class="project-desc">Desain poster iklan kreatif BCOS untuk kampanye peluncuran produk di media sosial.</p>
+                            <p class="project-desc">Desain poster iklan kreatif BCOS untuk kampanye peluncuran produk di
+                                media sosial.</p>
                             <div class="project-tech">
                                 <span>Photoshop</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -1114,14 +1155,15 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Graphic Designer
                             </div>
-                            <p class="project-desc">Pembuatan desain media promosi, spanduk, banner, dan merchandise resmi kegiatan KKN.</p>
+                            <p class="project-desc">Pembuatan desain media promosi, spanduk, banner, dan merchandise
+                                resmi kegiatan KKN.</p>
                             <div class="project-tech">
                                 <span>CorelDRAW</span><span>Photoshop</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -1142,7 +1184,8 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> UI/UX Designer
                             </div>
-                            <p class="project-desc">Perancangan wireframe (cetak biru) tata letak website layanan kesehatan posyandu ramah pengguna.</p>
+                            <p class="project-desc">Perancangan wireframe (cetak biru) tata letak website layanan
+                                kesehatan posyandu ramah pengguna.</p>
                             <div class="project-tech">
                                 <span>Figma</span><span>Wireframing</span>
                             </div>
@@ -1156,21 +1199,23 @@
                     </div>
 
                     <!-- Proyek 35: Desain UI Client Portal -->
-                    <div class="project-card" data-category="uiux" data-year="2025">
+                    <div class="project-card" data-category="uiux" data-year="2026" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/uiclient.png" alt="Desain UI Client Portal" class="project-img">
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
                                 <span class="project-badge">UIUX</span>
-                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2025</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
                             </div>
                             <h3 class="project-title">Desain UI Client Portal</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> UI/UX Designer
                             </div>
-                            <p class="project-desc">Desain user interface portal klien dengan fokus pada kegunaan, kejelasan informasi, dan aksesibilitas.</p>
+                            <p class="project-desc">Desain user interface portal klien dengan fokus pada kegunaan,
+                                kejelasan informasi, dan aksesibilitas.</p>
                             <div class="project-tech">
                                 <span>Figma</span><span>UI Design</span>
                             </div>
@@ -1198,7 +1243,8 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> UI/UX Designer
                             </div>
-                            <p class="project-desc">Struktur arsitektur informasi dan perancangan antarmuka sistem manajemen database terintegrasi.</p>
+                            <p class="project-desc">Struktur arsitektur informasi dan perancangan antarmuka sistem
+                                manajemen database terintegrasi.</p>
                             <div class="project-tech">
                                 <span>Figma</span><span>System Design</span>
                             </div>
@@ -1226,7 +1272,8 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Game UI Designer
                             </div>
-                            <p class="project-desc">Sketsa layout awal (wireframe) antarmuka permainan interaktif bertema edukasi anak.</p>
+                            <p class="project-desc">Sketsa layout awal (wireframe) antarmuka permainan interaktif
+                                bertema edukasi anak.</p>
                             <div class="project-tech">
                                 <span>Figma</span><span>Game UI</span>
                             </div>
@@ -1242,7 +1289,8 @@
                     <!-- Proyek 38: Storyboard Animasi Keripik Pisang -->
                     <div class="project-card" data-category="animation" data-year="2024">
                         <div class="project-img-container">
-                            <img src="assets/storyboardanimasikeripikpisang.png" alt="Storyboard Animasi Keripik Pisang" class="project-img">
+                            <img src="assets/storyboardanimasikeripikpisang.png" alt="Storyboard Animasi Keripik Pisang"
+                                class="project-img">
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
@@ -1254,14 +1302,15 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Storyboard Artist
                             </div>
-                            <p class="project-desc">Sketsa alur cerita visual (storyboard) untuk video promosi animasi produk Keripik Pisang.</p>
+                            <p class="project-desc">Sketsa alur cerita visual (storyboard) untuk video promosi animasi
+                                produk Keripik Pisang.</p>
                             <div class="project-tech">
                                 <span>Photoshop</span><span>Storyboarding</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -1270,7 +1319,8 @@
                     <!-- Proyek 39: Storyboard Iklan Layanan Masyarakat -->
                     <div class="project-card" data-category="animation" data-year="2024">
                         <div class="project-img-container">
-                            <img src="assets/storyboardiklanlayananmasyarakat.png" alt="Storyboard Iklan Layanan Masyarakat" class="project-img">
+                            <img src="assets/storyboardiklanlayananmasyarakat.png"
+                                alt="Storyboard Iklan Layanan Masyarakat" class="project-img">
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
@@ -1282,14 +1332,15 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Storyboard Artist
                             </div>
-                            <p class="project-desc">Konseptualisasi adegan demi adegan visual iklan layanan masyarakat tentang kebersihan lingkungan.</p>
+                            <p class="project-desc">Konseptualisasi adegan demi adegan visual iklan layanan masyarakat
+                                tentang kebersihan lingkungan.</p>
                             <div class="project-tech">
                                 <span>Photoshop</span><span>Storyboarding</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -1298,7 +1349,8 @@
                     <!-- Proyek 40: Storyboard Iklan Nipis Madu -->
                     <div class="project-card" data-category="animation" data-year="2024">
                         <div class="project-img-container">
-                            <img src="assets/storyboardiklannipismadu.png" alt="Storyboard Iklan Nipis Madu" class="project-img">
+                            <img src="assets/storyboardiklannipismadu.png" alt="Storyboard Iklan Nipis Madu"
+                                class="project-img">
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
@@ -1310,14 +1362,15 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Storyboard Artist
                             </div>
-                            <p class="project-desc">Penyusunan storyboard iklan televisi produk minuman segar Nipis Madu dengan adegan dinamis.</p>
+                            <p class="project-desc">Penyusunan storyboard iklan televisi produk minuman segar Nipis Madu
+                                dengan adegan dinamis.</p>
                             <div class="project-tech">
                                 <span>Photoshop</span><span>Storyboarding</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -1326,7 +1379,8 @@
                     <!-- Proyek 41: Storyboard Iklan Pisang -->
                     <div class="project-card" data-category="animation" data-year="2024">
                         <div class="project-img-container">
-                            <img src="assets/storyboardiklanpisang.png" alt="Storyboard Iklan Pisang" class="project-img">
+                            <img src="assets/storyboardiklanpisang.png" alt="Storyboard Iklan Pisang"
+                                class="project-img">
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
@@ -1338,22 +1392,24 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Storyboard Artist
                             </div>
-                            <p class="project-desc">Draf visual storyboard untuk keperluan motion graphic iklan camilan pisang cokelat.</p>
+                            <p class="project-desc">Draf visual storyboard untuk keperluan motion graphic iklan camilan
+                                pisang cokelat.</p>
                             <div class="project-tech">
                                 <span>Photoshop</span><span>Storyboarding</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 42: Desain Iklan Sirup Pisang -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/iklansiruppisang.png" alt="Desain Iklan Sirup Pisang" class="project-img">
                         </div>
                         <div class="project-content">
@@ -1366,23 +1422,26 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Graphic Designer
                             </div>
-                            <p class="project-desc">Pembuatan visual poster promosi dan materi branding digital untuk produk Sirup Pisang tradisional.</p>
+                            <p class="project-desc">Pembuatan visual poster promosi dan materi branding digital untuk
+                                produk Sirup Pisang tradisional.</p>
                             <div class="project-tech">
                                 <span>Photoshop</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 43: KKN Desa Cerme Profil Desa -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
                         <div class="project-img-container">
-                            <img src="assets/kkndesacermeprofildesa.png" alt="KKN Desa Cerme Profil Desa" class="project-img">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
+                            <img src="assets/kkndesacermeprofildesa.png" alt="KKN Desa Cerme Profil Desa"
+                                class="project-img">
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
@@ -1394,70 +1453,75 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Graphic Designer & Media
                             </div>
-                            <p class="project-desc">Desain buku profil desa dan media cetak publikasi program kerja KKN mahasiswa di Desa Cerme.</p>
+                            <p class="project-desc">Desain buku profil desa dan media cetak publikasi program kerja KKN
+                                mahasiswa di Desa Cerme.</p>
                             <div class="project-tech">
                                 <span>Illustrator</span><span>Photoshop</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 44: Karakter Animasi 3D Judy -->
-                    <div class="project-card" data-category="animation" data-year="2025">
+                    <div class="project-card" data-category="animation" data-year="2026" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/3djudyanimation.png" alt="Karakter Animasi 3D Judy" class="project-img">
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
                                 <span class="project-badge">Animation</span>
-                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2025</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
                             </div>
                             <h3 class="project-title">Animasi 3D Judy</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> 3D Animator
                             </div>
-                            <p class="project-desc">Pembuatan model 3D dan animasi gerak karakter Judy dengan ekspresi wajah yang natural.</p>
+                            <p class="project-desc">Pembuatan model 3D dan animasi gerak karakter Judy dengan ekspresi
+                                wajah yang natural.</p>
                             <div class="project-tech">
                                 <span>Blender</span><span>3D Animation</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 45: Desain Model 3D Pokemon -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/3dpokemon.png" alt="Desain Model 3D Pokemon" class="project-img">
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
                                 <span class="project-badge">Graphic Design</span>
-                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
                             </div>
                             <h3 class="project-title">Model 3D Pokemon</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> 3D Artist
                             </div>
-                            <p class="project-desc">Pemodelan 3D karakter Pokemon ikonik menggunakan teknik high-poly rendering untuk detail maksimal.</p>
+                            <p class="project-desc">Pemodelan 3D karakter Pokemon ikonik menggunakan teknik high-poly
+                                rendering untuk detail maksimal.</p>
                             <div class="project-tech">
                                 <span>Blender</span><span>3D Modeling</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
@@ -1478,7 +1542,8 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> AR Developer
                             </div>
-                            <p class="project-desc">Proyek aplikasi edukasi interaktif berbasis Augmented Reality (AR) visualisasi bumi 3D secara real-time.</p>
+                            <p class="project-desc">Proyek aplikasi edukasi interaktif berbasis Augmented Reality (AR)
+                                visualisasi bumi 3D secara real-time.</p>
                             <div class="project-tech">
                                 <span>Unity</span><span>Vuforia</span><span>Blender</span>
                             </div>
@@ -1506,23 +1571,26 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Illustrator
                             </div>
-                            <p class="project-desc">Pembuatan visual ilustrasi kreatif untuk kebutuhan maskot / brand avatar desainer.</p>
+                            <p class="project-desc">Pembuatan visual ilustrasi kreatif untuk kebutuhan maskot / brand
+                                avatar desainer.</p>
                             <div class="project-tech">
                                 <span>Photoshop</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 48: Instagram Feed KKN Desa Cerme -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
                         <div class="project-img-container">
-                            <img src="assets/igfeedkkndesacerme.png" alt="Instagram Feed KKN Desa Cerme" class="project-img">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
+                            <img src="assets/igfeedkkndesacerme.png" alt="Instagram Feed KKN Desa Cerme"
+                                class="project-img">
                         </div>
                         <div class="project-content">
                             <div class="project-meta">
@@ -1534,22 +1602,24 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Media Designer
                             </div>
-                            <p class="project-desc">Desain konten mikro-blogging Instagram edukatif seputar program KKN mahasiswa di Desa Cerme.</p>
+                            <p class="project-desc">Desain konten mikro-blogging Instagram edukatif seputar program KKN
+                                mahasiswa di Desa Cerme.</p>
                             <div class="project-tech">
                                 <span>Canva</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Proyek 49: Instagram Feed Six Pro -->
-                    <div class="project-card" data-category="graphic" data-year="2025">
+                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="true">
                         <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/igfeedsixpro.png" alt="Instagram Feed Six Pro" class="project-img">
                         </div>
                         <div class="project-content">
@@ -1562,14 +1632,15 @@
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Social Media Designer
                             </div>
-                            <p class="project-desc">Perancangan visual feed Instagram profesional untuk promosi brand Six Pro secara teratur dan estetik.</p>
+                            <p class="project-desc">Perancangan visual feed Instagram profesional untuk promosi brand
+                                Six Pro secara teratur dan estetik.</p>
                             <div class="project-tech">
                                 <span>Photoshop</span><span>Illustrator</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://www.behance.net" class="btn btn-primary btn-sm btn-block-link"
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
                                     target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-behance"></i> Lihat di Behance
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
                                 </a>
                             </div>
                         </div>

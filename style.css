@@ -781,6 +781,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-year {
+    display: none !important;
     font-family: var(--font-main);
     font-size: 0.7rem;
     font-weight: 700;
@@ -2944,6 +2945,7 @@ h1, h2, h3, h4, h5, h6 {
     .sunset-sun-bg {
         width: 320px;
         height: 320px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2951,4 +2953,26 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr !important;
         gap: 15px;
     }
+}
+
+/* Hero CV Action styles */
+.hero-cv-action {
+    margin-top: -25px;
+    margin-bottom: 45px;
+    display: flex;
+}
+
+.btn-cv {
+    border-style: dashed !important;
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+    background-color: transparent;
+    box-shadow: 4px 4px 0px var(--primary) !important;
+}
+
+.btn-cv:hover {
+    border-color: var(--primary-hover) !important;
+    color: var(--primary-hover) !important;
+    box-shadow: 2px 2px 0px var(--primary-hover) !important;
+    background-color: rgba(255, 112, 99, 0.05);
 }

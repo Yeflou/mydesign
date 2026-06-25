@@ -29,9 +29,9 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
-            ./ deploy@147.93.159.42:mydesign/html/
+            ./ deploy@147.93.159.42:porto/html/
 
-      - name: Restart container
+      - name: Reload nginx (pick up new files)
         run: |
           ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no deploy@147.93.159.42 \
-            'cd ~/mydesign && docker compose up -d'
+            'docker exec porto nginx -s reload || true'

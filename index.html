@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
@@ -87,11 +87,15 @@
                 </div>
 
                 <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">Lihat Proyek <i class="fa-solid fa-palette"></i></a>
+                    <a href="#projects" class="btn btn-primary filter-scroll-btn" data-target-filter="graphic"><i class="fa-solid fa-palette"></i> Portfolio Desain</a>
+                    <a href="#projects" class="btn btn-secondary filter-scroll-btn" data-target-filter="animation"><i class="fa-solid fa-video"></i> Animasi &amp; Videografi</a>
+                    <a href="https://yeflou.github.io/allporto.html" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-solid fa-image"></i> Portfolio Gambar <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; margin-left: 4px;"></i></a>
+                </div>
 
-                    <a href="assets/cv.pdf" class="btn btn-secondary" download="CV_Amelia_Flora.pdf">Unduh CV <i
-                            class="fa-solid fa-file-arrow-down"></i></a>
-                    <a href="#contact" class="btn btn-outline">Hubungi Saya <i class="fa-regular fa-envelope"></i></a>
+                <div class="hero-cv-action">
+                    <a href="assets/cv.pdf" download="CV_Amelia_Flora.pdf" class="btn btn-cv">
+                        <i class="fa-solid fa-file-pdf"></i> Unduh CV Amelia Flora
+                    </a>
                 </div>
 
             </div>
@@ -124,7 +128,7 @@
                 </div>
 
                 <div class="profile-photo-wrapper" id="photoFrame" style="padding: 0;">
-                    <img src="assets/myfoto.jpeg" alt="Amelia Flora Aprilianingrum" class="profile-photo">
+                    <img src="assets/mypict.jpeg" alt="Amelia Flora Aprilianingrum" class="profile-photo">
                     <input type="file" id="photoInput" accept="image/*" style="display: none;">
                 </div>
             </div>
@@ -155,8 +159,6 @@
                         <i class="fa-solid fa-arrow-down-wide-short"></i>
                         <select id="projectSort" aria-label="Urutkan proyek">
                             <option value="featured">Proyek Pilihan (Top)</option>
-                            <option value="year-desc">Tahun: Terbaru &rarr; Terlama</option>
-                            <option value="year-asc">Tahun: Terlama &rarr; Terbaru</option>
                             <option value="alpha-asc">Nama: A &rarr; Z</option>
                             <option value="alpha-desc">Nama: Z &rarr; A</option>
                         </select>
@@ -164,8 +166,35 @@
                 </div>
 
                 <div class="projects-grid">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true" data-order="1">
+                        <div class="project-img-container">
+                            <img src="assets/desainkkn.png" alt="Desain Atribut KKN" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-badge">Graphic Design</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
+                            </div>
+                            <h3 class="project-title">Portfolio Desain Selama KKN</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Graphic Designer
+                            </div>
+                            <p class="project-desc">Pembuatan desain media promosi, spanduk, banner, dan merchandise
+                                resmi kegiatan KKN.</p>
+                            <div class="project-tech">
+                                <span>CorelDRAW</span><span>Photoshop</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Proyek: Redraw Logo Kober Mie -->
-                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="true" data-order="3">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/redrawlogokobermie.png" alt="Redraw Logo Kober Mie" class="project-img"
@@ -195,7 +224,7 @@
                         </div>
                     </div>
                     <!-- Proyek 1: Branding Amelia Flora -->
-                    <div class="project-card" data-category="graphic" data-year="2026">
+                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/logo.png" alt="Branding Amelia Flora" class="project-img"
                                 style="object-fit: contain; background: #fffcf9; padding: 20px;">
@@ -225,7 +254,7 @@
                     </div>
 
                     <!-- Proyek 2: Desain Aplikasi SumTime -->
-                    <div class="project-card" data-category="uiux" data-year="2025">
+                    <div class="project-card" data-category="uiux" data-year="2025" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/sumtime.jpg" alt="Desain Aplikasi SumTime" class="project-img">
                         </div>
@@ -254,7 +283,7 @@
                     </div>
 
                     <!-- Proyek 3: 3D Typography Design -->
-                    <div class="project-card" data-category="vector" data-year="2025">
+                    <div class="project-card" data-category="vector" data-year="2025" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/3dtypography.png" alt="3D Typography Design" class="project-img">
                         </div>
@@ -282,7 +311,7 @@
                     </div>
 
                     <!-- Proyek 4: Logo Nature Branding -->
-                    <div class="project-card" data-category="graphic" data-year="2025">
+                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/logonature.png" alt="Logo Nature Branding" class="project-img">
                         </div>
@@ -311,7 +340,7 @@
                     </div>
 
                     <!-- Proyek 5: Mural SMKN 6 Surakarta -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/muralsmkn6.png" alt="Mural SMKN 6 Surakarta" class="project-img">
                         </div>
@@ -340,7 +369,7 @@
                     </div>
 
                     <!-- Proyek 6: Desain Kemasan Runchy -->
-                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true" data-order="10">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/desainkemasanrunchy.png" alt="Desain Kemasan Runchy" class="project-img">
@@ -370,7 +399,7 @@
                     </div>
 
                     <!-- Proyek 7: Poster Promosi Es Memel -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true" data-order="11">
                         <div class="project-img-container">
                             <img src="assets/posteresmemel.png" alt="Poster Promosi Es Memel" class="project-img">
                         </div>
@@ -399,7 +428,7 @@
                     </div>
 
                     <!-- Proyek 8: Desain Kaos &amp; T-Shirt Custom -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true" data-order="6">
                         <div class="project-img-container">
                             <img src="assets/desaintshirt.png" alt="Desain Kaos &amp; T-Shirt Custom"
                                 class="project-img">
@@ -429,7 +458,7 @@
                     </div>
 
                     <!-- Proyek 9: Vector Art WPAP Bung Karno -->
-                    <div class="project-card" data-category="vector" data-year="2024">
+                    <div class="project-card" data-category="vector" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/wpap1.png" alt="Vector Art WPAP Bung Karno" class="project-img">
                         </div>
@@ -458,7 +487,7 @@
                     </div>
 
                     <!-- Proyek 10: Animasi Iklan Layanan -->
-                    <div class="project-card" data-category="animation" data-year="2024" data-featured="true">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/animasiiklanlayananmasyarakat.png" alt="Animasi Iklan Layanan Masyarakat"
@@ -489,7 +518,7 @@
                     </div>
 
                     <!-- Proyek 11: Video Iklan Klethak Klethik -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/videoiklanklethakklethik.png" alt="Video Iklan Klethak Klethik"
                                 class="project-img">
@@ -519,7 +548,7 @@
                     </div>
 
                     <!-- Proyek 12: Cinematic Pasar Gede -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/cenematicpasargede.png" alt="Cinematic Pasar Gede Surakarta"
                                 class="project-img">
@@ -549,7 +578,7 @@
                     </div>
 
                     <!-- Proyek 13: Desain T-Shirt Custom Vol. 2 -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true" data-order="7">
                         <div class="project-img-container">
                             <img src="assets/desaintshirt2.png" alt="Desain T-Shirt Custom Vol. 2" class="project-img">
                         </div>
@@ -578,7 +607,7 @@
                     </div>
 
                     <!-- Proyek 14: Desain Busana &amp; Kaos Baju -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/desainbaju.png" alt="Desain Busana &amp; Kaos Baju" class="project-img">
                         </div>
@@ -607,7 +636,7 @@
                     </div>
 
                     <!-- Proyek 15: Desain Feed Instagram Baju 2 -->
-                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/desainfeedbjau2.png" alt="Desain Feed Instagram Baju 2"
@@ -638,7 +667,7 @@
                     </div>
 
                     <!-- Proyek 16: Desain Feed Instagram Baju -->
-                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/desainnfeedbaju.png" alt="Desain Feed Instagram Baju" class="project-img">
@@ -668,7 +697,7 @@
                     </div>
 
                     <!-- Proyek 17: Desain Mug Merchandise -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true" data-order="14">
                         <div class="project-img-container">
                             <img src="assets/desainmug.png" alt="Desain Mug Merchandise" class="project-img">
                         </div>
@@ -697,7 +726,7 @@
                     </div>
 
                     <!-- Proyek 18: Comic Pouch &amp; Mask Design -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/comiishlpouchdesainmask.png" alt="Comic Pouch &amp; Mask Design"
                                 class="project-img">
@@ -707,7 +736,7 @@
                                 <span class="project-badge">Graphic Design</span>
                                 <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
                             </div>
-                            <h3 class="project-title">Comic Pouch &amp; Mask Design</h3>
+                            <h3 class="project-title">Desain kemasan masker kecantikan</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Illustrator
@@ -727,7 +756,7 @@
                     </div>
 
                     <!-- Proyek 19: Poster Kampanye Lawan Corona -->
-                    <div class="project-card" data-category="graphic" data-year="2023">
+                    <div class="project-card" data-category="graphic" data-year="2023" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/posterlawancorona.png" alt="Poster Kampanye Lawan Corona"
                                 class="project-img">
@@ -757,7 +786,7 @@
                     </div>
 
                     <!-- Proyek 20: Poster Mewarnai OUFEST -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/colouringOUFEST.png" alt="Poster Mewarnai Colouring OUFEST"
                                 class="project-img">
@@ -787,7 +816,7 @@
                     </div>
 
                     <!-- Proyek 21: Vector Art WPAP Vol. 2 -->
-                    <div class="project-card" data-category="vector" data-year="2024">
+                    <div class="project-card" data-category="vector" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/wpap2.png" alt="Vector Art WPAP Vol. 2" class="project-img">
                         </div>
@@ -816,7 +845,7 @@
                     </div>
 
                     <!-- Proyek 22: Desain Infografis Vol. 1 -->
-                    <div class="project-card" data-category="vector" data-year="2024">
+                    <div class="project-card" data-category="vector" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/infografis1.png" alt="Desain Infografis Edukatif Vol. 1"
                                 class="project-img">
@@ -846,7 +875,7 @@
                     </div>
 
                     <!-- Proyek 23: Desain Infografis Vol. 2 -->
-                    <div class="project-card" data-category="vector" data-year="2024">
+                    <div class="project-card" data-category="vector" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/infografis2.png" alt="Desain Infografis Edukatif Vol. 2"
                                 class="project-img">
@@ -876,7 +905,7 @@
                     </div>
 
                     <!-- Proyek 24: Video Animasi Mermaid 2D -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/animasi mermaid.png" alt="Video Animasi Mermaid 2D" class="project-img">
                         </div>
@@ -905,7 +934,7 @@
                     </div>
 
                     <!-- Proyek 25: Video Animasi Balon -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/animasibalon.png" alt="Video Animasi Balon Melayang" class="project-img">
                         </div>
@@ -934,7 +963,7 @@
                     </div>
 
                     <!-- Proyek 26: Video Animasi Kucing Lucu -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/animasikucing.png" alt="Video Animasi Kucing Lucu" class="project-img">
                         </div>
@@ -963,7 +992,7 @@
                     </div>
 
                     <!-- Proyek 27: Video Animasi Nipis Madu -->
-                    <div class="project-card" data-category="animation" data-year="2024" data-featured="true">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/animasinipismadu.png" alt="Video Animasi Nipis Madu" class="project-img">
@@ -993,7 +1022,7 @@
                     </div>
 
                     <!-- Proyek 28: Video Animasi Wayang Kulit -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/animasiwayang.png" alt="Video Animasi Wayang Kulit" class="project-img">
                         </div>
@@ -1022,7 +1051,7 @@
                     </div>
 
                     <!-- Proyek 29: Video Animasi Puppet Naga -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/puppetnaga.png" alt="Video Animasi Puppet Naga" class="project-img">
                         </div>
@@ -1051,7 +1080,7 @@
                     </div>
 
                     <!-- Proyek 30: Mockup Branding BCOS -->
-                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="false">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/mockupbcos.png" alt="Mockup Branding BCOS" class="project-img">
@@ -1081,7 +1110,7 @@
                     </div>
 
                     <!-- Proyek 31: Desain Kemasan BCOS -->
-                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="true" data-order="13">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/packagingbcos.png" alt="Desain Kemasan BCOS" class="project-img">
@@ -1111,7 +1140,7 @@
                     </div>
 
                     <!-- Proyek 32: Poster Promosi BCOS -->
-                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="true" data-order="4">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/posterbcos.png" alt="Poster Promosi BCOS" class="project-img">
@@ -1141,36 +1170,10 @@
                     </div>
 
                     <!-- Proyek 33: Desain Atribut KKN -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
-                        <div class="project-img-container">
-                            <img src="assets/desainkkn.png" alt="Desain Atribut KKN" class="project-img">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-badge">Graphic Design</span>
-                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
-                            </div>
-                            <h3 class="project-title">Desain Atribut KKN</h3>
-                            <div class="project-role-info"
-                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
-                                <strong>Role:</strong> Graphic Designer
-                            </div>
-                            <p class="project-desc">Pembuatan desain media promosi, spanduk, banner, dan merchandise
-                                resmi kegiatan KKN.</p>
-                            <div class="project-tech">
-                                <span>CorelDRAW</span><span>Photoshop</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
-                                    target="_blank" rel="noopener">
-                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+
 
                     <!-- Proyek 34: Wireframe Web Posyandu -->
-                    <div class="project-card" data-category="uiux" data-year="2025">
+                    <div class="project-card" data-category="uiux" data-year="2025" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/wireframewebposyandu.png" alt="Wireframe Web Posyandu" class="project-img">
                         </div>
@@ -1199,7 +1202,7 @@
                     </div>
 
                     <!-- Proyek 35: Desain UI Client Portal -->
-                    <div class="project-card" data-category="uiux" data-year="2026" data-featured="true">
+                    <div class="project-card" data-category="uiux" data-year="2026" data-featured="true" data-order="5">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/uiclient.png" alt="Desain UI Client Portal" class="project-img">
@@ -1229,7 +1232,7 @@
                     </div>
 
                     <!-- Proyek 36: Desain Sistem Informasi -->
-                    <div class="project-card" data-category="uiux" data-year="2025">
+                    <div class="project-card" data-category="uiux" data-year="2025" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/desainsistem.png" alt="Desain Sistem Informasi" class="project-img">
                         </div>
@@ -1258,7 +1261,7 @@
                     </div>
 
                     <!-- Proyek 37: Wireframe Game Interface -->
-                    <div class="project-card" data-category="uiux" data-year="2024">
+                    <div class="project-card" data-category="uiux" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/wireframegame.png" alt="Wireframe Game Interface" class="project-img">
                         </div>
@@ -1287,7 +1290,7 @@
                     </div>
 
                     <!-- Proyek 38: Storyboard Animasi Keripik Pisang -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/storyboardanimasikeripikpisang.png" alt="Storyboard Animasi Keripik Pisang"
                                 class="project-img">
@@ -1317,7 +1320,7 @@
                     </div>
 
                     <!-- Proyek 39: Storyboard Iklan Layanan Masyarakat -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/storyboardiklanlayananmasyarakat.png"
                                 alt="Storyboard Iklan Layanan Masyarakat" class="project-img">
@@ -1347,7 +1350,7 @@
                     </div>
 
                     <!-- Proyek 40: Storyboard Iklan Nipis Madu -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/storyboardiklannipismadu.png" alt="Storyboard Iklan Nipis Madu"
                                 class="project-img">
@@ -1377,7 +1380,7 @@
                     </div>
 
                     <!-- Proyek 41: Storyboard Iklan Pisang -->
-                    <div class="project-card" data-category="animation" data-year="2024">
+                    <div class="project-card" data-category="animation" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/storyboardiklanpisang.png" alt="Storyboard Iklan Pisang"
                                 class="project-img">
@@ -1407,7 +1410,7 @@
                     </div>
 
                     <!-- Proyek 42: Desain Iklan Sirup Pisang -->
-                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true" data-order="8">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/iklansiruppisang.png" alt="Desain Iklan Sirup Pisang" class="project-img">
@@ -1437,7 +1440,7 @@
                     </div>
 
                     <!-- Proyek 43: KKN Desa Cerme Profil Desa -->
-                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true" data-order="9">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/kkndesacermeprofildesa.png" alt="KKN Desa Cerme Profil Desa"
@@ -1468,7 +1471,7 @@
                     </div>
 
                     <!-- Proyek 44: Karakter Animasi 3D Judy -->
-                    <div class="project-card" data-category="animation" data-year="2026" data-featured="true">
+                    <div class="project-card" data-category="animation" data-year="2026" data-featured="false">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/3djudyanimation.png" alt="Karakter Animasi 3D Judy" class="project-img">
@@ -1498,7 +1501,7 @@
                     </div>
 
                     <!-- Proyek 45: Desain Model 3D Pokemon -->
-                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="false">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/3dpokemon.png" alt="Desain Model 3D Pokemon" class="project-img">
@@ -1528,7 +1531,7 @@
                     </div>
 
                     <!-- Proyek 46: Augmented Reality 3D Bumi -->
-                    <div class="project-card" data-category="uiux" data-year="2025">
+                    <div class="project-card" data-category="uiux" data-year="2025" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/AR3dbumi.png" alt="Augmented Reality 3D Bumi" class="project-img">
                         </div>
@@ -1557,7 +1560,7 @@
                     </div>
 
                     <!-- Proyek 47: Desain Maskot Cosu -->
-                    <div class="project-card" data-category="graphic" data-year="2024">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="false">
                         <div class="project-img-container">
                             <img src="assets/cosulagidesainer.jpeg" alt="Desain Maskot Cosu" class="project-img">
                         </div>
@@ -1566,7 +1569,7 @@
                                 <span class="project-badge">Graphic Design</span>
                                 <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
                             </div>
-                            <h3 class="project-title">Desain Maskot Cosu</h3>
+                            <h3 class="project-title">Desain Poster Event Cosplay</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Illustrator
@@ -1586,7 +1589,7 @@
                     </div>
 
                     <!-- Proyek 48: Instagram Feed KKN Desa Cerme -->
-                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2024" data-featured="true" data-order="12">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/igfeedkkndesacerme.png" alt="Instagram Feed KKN Desa Cerme"
@@ -1597,7 +1600,7 @@
                                 <span class="project-badge">Graphic Design</span>
                                 <span class="project-year"><i class="fa-regular fa-calendar"></i> 2024</span>
                             </div>
-                            <h3 class="project-title">IG Feed KKN Desa Cerme</h3>
+                            <h3 class="project-title">Desain IG Feed KKN Desa Cerme</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Media Designer
@@ -1617,7 +1620,7 @@
                     </div>
 
                     <!-- Proyek 49: Instagram Feed Six Pro -->
-                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="true">
+                    <div class="project-card" data-category="graphic" data-year="2025" data-featured="true" data-order="2">
                         <div class="project-img-container">
                             <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
                             <img src="assets/igfeedsixpro.png" alt="Instagram Feed Six Pro" class="project-img">
@@ -1627,13 +1630,226 @@
                                 <span class="project-badge">Graphic Design</span>
                                 <span class="project-year"><i class="fa-regular fa-calendar"></i> 2025</span>
                             </div>
-                            <h3 class="project-title">IG Feed Six Pro</h3>
+                            <h3 class="project-title">Desain IG Feed Six Pro</h3>
                             <div class="project-role-info"
                                 style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
                                 <strong>Role:</strong> Social Media Designer
                             </div>
                             <p class="project-desc">Perancangan visual feed Instagram profesional untuk promosi brand
                                 Six Pro secara teratur dan estetik.</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span><span>Illustrator</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 50: Desain Banner Ayam Bakar Mas Ardi -->
+                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="false">
+                        <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
+                            <img src="assets/BannerayambakarMasArdi.png" alt="Desain Banner Ayam Bakar Mas Ardi"
+                                class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-badge">Graphic Design</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
+                            </div>
+                            <h3 class="project-title">Desain Banner Ayam Bakar Mas Ardi</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Graphic Designer
+                            </div>
+                            <p class="project-desc">Desain spanduk dan banner promosi warung makan Ayam Bakar Mas Ardi
+                                dengan visual yang menarik dan menggugah selera.</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span><span>Illustrator</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 51: Desain Banner Es Teh Pak Ardi -->
+                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="false">
+                        <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
+                            <img src="assets/YbannerEsTehPakArdi.png" alt="Desain Banner Es Teh Pak Ardi"
+                                class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-badge">Graphic Design</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
+                            </div>
+                            <h3 class="project-title">Desain Banner Es Teh Pak Ardi</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Graphic Designer
+                            </div>
+                            <p class="project-desc">Desain banner luar ruangan (outdoor banner) promosi minuman segar Es
+                                Teh Pak Ardi yang modern dan segar.</p>
+                            <div class="project-tech">
+                                <span>CorelDRAW</span><span>Photoshop</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 52: Animasi Logo Nature -->
+                    <div class="project-card" data-category="animation" data-year="2026" data-featured="false">
+                        <div class="project-img-container">
+                            <img src="assets/animasilogonature.png" alt="Animasi Logo Nature" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-badge">Animation</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
+                            </div>
+                            <h3 class="project-title">Animasi Logo Nature</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Motion Designer
+                            </div>
+                            <p class="project-desc">Animasi logo (logo reveal) bertema Nature Branding untuk kebutuhan
+                                intro video promosi digital.</p>
+                            <div class="project-tech">
+                                <span>After Effects</span><span>Illustrator</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 53: Desain Banner Es Oyen -->
+                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="false">
+                        <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
+                            <img src="assets/bannerEsOyen.png" alt="Desain Banner Es Oyen" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-badge">Graphic Design</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
+                            </div>
+                            <h3 class="project-title">Desain Banner Es Oyen</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Graphic Designer
+                            </div>
+                            <p class="project-desc">Desain spanduk menu warung makan / kuliner tradisional Es Oyen
+                                dengan perpaduan warna yang cerah dan komunikatif.</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span><span>Illustrator</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 54: Desain Banner Es Oyen Transito -->
+                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="false">
+                        <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
+                            <img src="assets/bannerEsOyenTransito.png" alt="Desain Banner Es Oyen Transito"
+                                class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-badge">Graphic Design</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
+                            </div>
+                            <h3 class="project-title">Desain Banner Es Oyen Transito</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Graphic Designer
+                            </div>
+                            <p class="project-desc">Desain banner media promosi gerai luar ruangan untuk Es Oyen cabang
+                                Transito dengan layout minimalis dan segar.</p>
+                            <div class="project-tech">
+                                <span>CorelDRAW</span><span>Photoshop</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 55: Desain Logo Aplikasi SumTime -->
+                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="false">
+                        <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
+                            <img src="assets/logoaplikasiSumTime.png" alt="Desain Logo Aplikasi SumTime"
+                                class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-badge">Graphic Design</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
+                            </div>
+                            <h3 class="project-title">Desain Logo Aplikasi SumTime</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Logo Designer
+                            </div>
+                            <p class="project-desc">Desain identitas visual logo aplikasi mobile pemesanan dimsum
+                                SumTime dengan gaya kartun yang menggemaskan.</p>
+                            <div class="project-tech">
+                                <span>Illustrator</span><span>Canva</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.Drive.net" class="btn btn-primary btn-sm btn-block-link"
+                                    target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-Drive"></i> Lihat di Drive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 56: Desain Sampul YouTube -->
+                    <div class="project-card" data-category="graphic" data-year="2026" data-featured="false">
+                        <div class="project-img-container">
+                            <span class="featured-badge"><i class="fa-solid fa-star"></i> Top Project</span>
+                            <img src="assets/sampulyoutube.png" alt="Desain Sampul YouTube" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-badge">Graphic Design</span>
+                                <span class="project-year"><i class="fa-regular fa-calendar"></i> 2026</span>
+                            </div>
+                            <h3 class="project-title">Desain Sampul YouTube</h3>
+                            <div class="project-role-info"
+                                style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Role:</strong> Graphic Designer
+                            </div>
+                            <p class="project-desc">Desain banner sampul (cover art) channel YouTube kreatif bertema
+                                kuliner dengan tata letak profesional.</p>
                             <div class="project-tech">
                                 <span>Photoshop</span><span>Illustrator</span>
                             </div>
@@ -1667,122 +1883,120 @@
 
             <div class="skills-grid">
 
-                <!-- Card 1: Pengembangan Perangkat Lunak -->
+                <!-- Card 1: Desain Grafis & Identitas Visual -->
                 <div class="skills-card">
                     <div class="skills-card-header">
-                        <i class="fa-solid fa-laptop-code"></i>
-                        <h3>Pengembangan Perangkat Lunak</h3>
+                        <i class="fa-solid fa-palette"></i>
+                        <h3>Desain Grafis &amp; Identitas Visual</h3>
                     </div>
                     <div class="skills-list-new">
                         <div class="skill-group">
-                            <h4 class="skill-group-title">Pengembangan Aplikasi Web</h4>
-                            <p class="skill-group-desc">HTML, CSS, JavaScript, PHP, CodeIgniter</p>
+                            <h4 class="skill-group-title">Branding &amp; Logo Design</h4>
+                            <p class="skill-group-desc">Desain logo, palet warna, tipografi, dan panduan identitas
+                                brand.</p>
                         </div>
                         <div class="skill-group">
-                            <h4 class="skill-group-title">Pengembangan Aplikasi Mobile</h4>
-                            <p class="skill-group-desc">Flutter, Supabase, Firebase</p>
+                            <h4 class="skill-group-title">Desain Cetak &amp; Merchandise</h4>
+                            <p class="skill-group-desc">Desain banner promosi, spanduk, kemasan produk (packaging),
+                                kaos/T-shirt kustom, dan mug.</p>
                         </div>
                         <div class="skill-group">
-                            <h4 class="skill-group-title">Pengembangan REST API</h4>
-                            <p class="skill-group-desc">Golang, Gin, Postman</p>
+                            <h4 class="skill-group-title">Konten Media Sosial</h4>
+                            <p class="skill-group-desc">Tata letak feed Instagram kreatif, poster iklan, mikro-blogging,
+                                dan banner sampul YouTube.</p>
                         </div>
                         <div class="skill-group">
-                            <h4 class="skill-group-title">Integrasi API</h4>
-                            <p class="skill-group-desc">Google Sheets API, REST API</p>
-                        </div>
-                        <div class="skill-group">
-                            <h4 class="skill-group-title">Pengujian Sistem</h4>
-                            <p class="skill-group-desc">Black Box Testing</p>
+                            <h4 class="skill-group-title">Layout &amp; Tipografi</h4>
+                            <p class="skill-group-desc">Perancangan buku profil, majalah, infografis data statistik, dan
+                                desain teks 3D.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2: Analisis & Perancangan Sistem -->
+                <!-- Card 2: Ilustrasi, Vektor &amp; Animasi -->
                 <div class="skills-card">
                     <div class="skills-card-header">
-                        <i class="fa-solid fa-diagram-project"></i>
-                        <h3>Analisis & Perancangan Sistem</h3>
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <h3>Ilustrasi &amp; Media Kreatif</h3>
                     </div>
                     <div class="skills-list-new">
                         <div class="skill-group">
-                            <h4 class="skill-group-title">Analisis Kebutuhan Sistem</h4>
+                            <h4 class="skill-group-title">Tracing &amp; Redraw Vektor</h4>
+                            <p class="skill-group-desc">Menggambar ulang aset raster (JPEG/PNG) menjadi vektor presisi
+                                tinggi.</p>
                         </div>
                         <div class="skill-group">
-                            <h4 class="skill-group-title">Perancangan Basis Data</h4>
-                            <p class="skill-group-desc">MySQL, PostgreSQL</p>
+                            <h4 class="skill-group-title">Seni Vektor Kustom</h4>
+                            <p class="skill-group-desc">Wedha's Pop Art Portrait (WPAP), line art, ilustrasi karakter
+                                kartun, dan mural sekolah.</p>
                         </div>
                         <div class="skill-group">
-                            <h4 class="skill-group-title">Pemodelan Sistem</h4>
-                            <p class="skill-group-desc">UML</p>
+                            <h4 class="skill-group-title">Motion Graphics &amp; Animasi 2D</h4>
+                            <p class="skill-group-desc">Video animasi iklan layanan masyarakat, animasi intro logo,
+                                storyboard, dan motion assets.</p>
                         </div>
                         <div class="skill-group">
-                            <h4 class="skill-group-title">Perancangan Alur Pengguna</h4>
-                            <p class="skill-group-desc">User Flow</p>
-                        </div>
-                        <div class="skill-group">
-                            <h4 class="skill-group-title">Metodologi Pengembangan</h4>
-                            <p class="skill-group-desc">Agile Development, SDLC Waterfall</p>
+                            <h4 class="skill-group-title">3D Art &amp; Animasi</h4>
+                            <p class="skill-group-desc">Pemodelan objek 3D (Pokemon), rigging &amp; animasi karakter
+                                (Judy) menggunakan Blender.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3: UI/UX Design -->
+                <!-- Card 3: UI/UX &amp; Desain Antarmuka -->
                 <div class="skills-card">
                     <div class="skills-card-header">
                         <i class="fa-solid fa-bezier-curve"></i>
-                        <h3>UI/UX Design</h3>
+                        <h3>UI/UX &amp; Desain Antarmuka</h3>
                     </div>
                     <div class="skills-list-new">
                         <div class="skill-group">
-                            <h4 class="skill-group-title">Wireframing</h4>
-                        </div>
-
-                        <div class="skill-group">
-                            <h4 class="skill-group-title">Desain Antarmuka Pengguna (UI)</h4>
+                            <h4 class="skill-group-title">Wireframing &amp; Prototyping</h4>
+                            <p class="skill-group-desc">Sketsa wireframe manual, pembuatan cetak biru tata letak
+                                aplikasi mobile dan web.</p>
                         </div>
                         <div class="skill-group">
-                            <h4 class="skill-group-title">Desain Pengalaman Pengguna (UX)</h4>
+                            <h4 class="skill-group-title">User Interface (UI) Design</h4>
+                            <p class="skill-group-desc">Desain visual antarmuka portal klien, sistem informasi, dan game
+                                edukasi anak.</p>
+                        </div>
+                        <div class="skill-group">
+                            <h4 class="skill-group-title">User Experience (UX) Design</h4>
+                            <p class="skill-group-desc">Riset pengguna, analisis alur pengguna (user flow), arsitektur
+                                informasi, dan pengujian kegunaan.</p>
                         </div>
                         <div class="skill-group">
                             <h4 class="skill-group-title">Design System</h4>
-                        </div>
-                        <div class="skill-group">
-                            <h4 class="skill-group-title">Tools</h4>
-                            <p class="skill-group-desc">Figma, Drawio</p>
+                            <p class="skill-group-desc">Pembuatan komponen antarmuka yang konsisten dan reusable di
+                                Figma.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 4: Teknologi & Tools -->
+                <!-- Card 4: Alat Kreatif &amp; Pengembangan Teknologi -->
                 <div class="skills-card">
                     <div class="skills-card-header">
                         <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <h3>Teknologi & Tools</h3>
+                        <h3>Alat Kreatif &amp; Teknologi</h3>
                     </div>
                     <div class="skills-list-new tech-grid-skills">
                         <div class="tech-item-skill">
-                            <span class="tech-label-skill">Frontend</span>
-                            <span class="tech-tags-skill">HTML • CSS • JavaScript</span>
+                            <span class="tech-label-skill">Creative Design</span>
+                            <span class="tech-tags-skill">Adobe Illustrator • Adobe Photoshop • CorelDRAW • Canva •
+                                Figma</span>
                         </div>
                         <div class="tech-item-skill">
-                            <span class="tech-label-skill">Backend</span>
-                            <span class="tech-tags-skill">PHP • Golang • CodeIgniter • Gin</span>
+                            <span class="tech-label-skill">Video &amp; 3D</span>
+                            <span class="tech-tags-skill">Adobe After Effects • Adobe Premiere Pro • Blender •
+                                Unity</span>
                         </div>
                         <div class="tech-item-skill">
-                            <span class="tech-label-skill">Mobile</span>
-                            <span class="tech-tags-skill">Flutter</span>
+                            <span class="tech-label-skill">Web &amp; Mobile</span>
+                            <span class="tech-tags-skill">HTML • CSS • JavaScript • PHP • Flutter • CodeIgniter</span>
                         </div>
                         <div class="tech-item-skill">
-                            <span class="tech-label-skill">Database</span>
-                            <span class="tech-tags-skill">MySQL • PostgreSQL • Supabase • Firebase</span>
-                        </div>
-                        <div class="tech-item-skill">
-                            <span class="tech-label-skill">Design</span>
-                            <span class="tech-tags-skill">Figma</span>
-                        </div>
-                        <div class="tech-item-skill">
-                            <span class="tech-label-skill">API & Testing</span>
-                            <span class="tech-tags-skill">Google Sheets API • REST API • Postman</span>
+                            <span class="tech-label-skill">Backend &amp; DB</span>
+                            <span class="tech-tags-skill">Golang • Gin • MySQL • PostgreSQL • Supabase • Firebase</span>
                         </div>
                     </div>
                 </div>
@@ -1884,7 +2098,7 @@
 
 
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=5"></script>
 </body>
 
 </html>

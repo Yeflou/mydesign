@@ -93,6 +93,27 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateProjects() {
         if (!projectsGrid || projectCards.length === 0) return;
 
+        // Ensure featured badges are synchronized with data-featured attribute
+        projectCards.forEach(card => {
+            const isFeatured = card.getAttribute('data-featured') === 'true';
+            const imgContainer = card.querySelector('.project-img-container');
+            if (imgContainer) {
+                let badge = imgContainer.querySelector('.featured-badge');
+                if (isFeatured) {
+                    if (!badge) {
+                        badge = document.createElement('span');
+                        badge.className = 'featured-badge';
+                        badge.innerHTML = '<i class="fa-solid fa-star"></i> Top Project';
+                        imgContainer.insertBefore(badge, imgContainer.firstChild);
+                    }
+                } else {
+                    if (badge) {
+                        badge.remove();
+                    }
+                }
+            }
+        });
+
         const cardsArray = Array.from(projectCards);
 
         // 1. Sort the cards
@@ -103,17 +124,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (featA !== featB) {
                     return featB - featA; // featured first
                 }
-                const yearA = parseInt(a.getAttribute('data-year') || '0');
-                const yearB = parseInt(b.getAttribute('data-year') || '0');
-                return yearB - yearA;
-            } else if (currentSort === 'year-desc') {
-                const yearA = parseInt(a.getAttribute('data-year') || '0');
-                const yearB = parseInt(b.getAttribute('data-year') || '0');
-                return yearB - yearA;
-            } else if (currentSort === 'year-asc') {
-                const yearA = parseInt(a.getAttribute('data-year') || '0');
-                const yearB = parseInt(b.getAttribute('data-year') || '0');
-                return yearA - yearB;
+                if (featA === 1) {
+                    const orderA = parseInt(a.getAttribute('data-order') || '999');
+                    const orderB = parseInt(b.getAttribute('data-order') || '999');
+                    return orderA - orderB;
+                }
+                const titleA = a.querySelector('.project-title').textContent.toLowerCase().trim();
+                const titleB = b.querySelector('.project-title').textContent.toLowerCase().trim();
+                return titleA.localeCompare(titleB);
             } else if (currentSort === 'alpha-asc') {
                 const titleA = a.querySelector('.project-title').textContent.toLowerCase().trim();
                 const titleB = b.querySelector('.project-title').textContent.toLowerCase().trim();
@@ -245,6 +263,29 @@ document.addEventListener('DOMContentLoaded', () => {
             updateProjects();
         });
     }
+
+    // Hero action buttons: smooth scroll and filter synchronization
+    const heroFilterScrollBtns = document.querySelectorAll('.filter-scroll-btn');
+    heroFilterScrollBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetFilter = btn.getAttribute('data-target-filter');
+            const targetBtn = document.querySelector(`.filter-btn[data-filter="${targetFilter}"]`);
+            
+            if (targetBtn) {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                targetBtn.classList.add('active');
+                currentFilter = targetFilter;
+                showAll = false;
+                updateProjects();
+            }
+            
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 
     // Run once on load to establish initial order
     updateProjects();

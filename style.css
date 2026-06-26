@@ -2976,3 +2976,51 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 2px 2px 0px var(--primary-hover) !important;
     background-color: rgba(255, 112, 99, 0.05);
 }
+
+/* About Social Links */
+.about-socials {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.social-link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--bg-card);
+    transition: var(--transition);
+    box-shadow: 3px 3px 0px var(--text-light);
+}
+
+.social-link-item:hover {
+    border-color: var(--primary);
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0px var(--text-light);
+    background-color: var(--bg-card-hover);
+}
+
+.social-link-item i {
+    font-size: 1.25rem;
+    transition: var(--transition);
+}
+
+.social-link-item.instagram i {
+    color: #e1306c;
+}
+
+.social-link-item.youtube i {
+    color: #ff0000;
+}
+
+.social-link-item:hover i {
+    transform: scale(1.2);
+}

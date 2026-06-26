@@ -129,9 +129,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     const orderB = parseInt(b.getAttribute('data-order') || '999');
                     return orderA - orderB;
                 }
-                const titleA = a.querySelector('.project-title').textContent.toLowerCase().trim();
-                const titleB = b.querySelector('.project-title').textContent.toLowerCase().trim();
-                return titleA.localeCompare(titleB);
+                const indexA = Array.from(projectCards).indexOf(a);
+                const indexB = Array.from(projectCards).indexOf(b);
+                return indexA - indexB;
             } else if (currentSort === 'alpha-asc') {
                 const titleA = a.querySelector('.project-title').textContent.toLowerCase().trim();
                 const titleB = b.querySelector('.project-title').textContent.toLowerCase().trim();
